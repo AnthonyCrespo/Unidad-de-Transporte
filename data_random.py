@@ -46,17 +46,19 @@ hora = ['00','01','02','03','04','05','06','07','08',
         '09'] + [str(i) for i in range(10,24)]
 minutos = ['00','01','02','03','04','05','06','07','08','09'] + [str(i) for i in range(10,60)]
 coordinacion_zonal = [i for i in range(1,10)]
-num_reporte = 101
 
-s1 = "insert into datos_generales values "
-s2 = "insert into limpieza values "
-s3 = "insert into cabina_interior values "
-s4 = "insert into documentos values "
-s5 = "insert into cabina_exterior values "
+#numero inicial de reporte
+num_reporte = 1
+
+s1 = "insert into inspeccion_ambulancia.datos_generales values "
+s2 = "insert into inspeccion_ambulancia.limpieza values "
+s3 = "insert into inspeccion_ambulancia.cabina_interior values "
+s4 = "insert into inspeccion_ambulancia.documentos values "
+s5 = "insert into inspeccion_ambulancia.cabina_exterior values "
 s7 = ""
-s8 = "insert into otros_datos values " 
+s8 = "insert into inspeccion_ambulancia.otros_datos values " 
 
-n = 29900
+n = 10000
 for i in range(n):
     #Datos generales
     s1 += f"({num_reporte}, {random.choice(coordinacion_zonal)},'{random.choice(nombres)} {random.choice(apellidos)}', '{random.choice(nombres)} {random.choice(apellidos)}',"
@@ -70,7 +72,7 @@ for i in range(n):
     #Cabina Exterior
     s5 = respuestas(num_reporte, s5, 26, 47)
     #danos
-    s7 += descripcion(num_reporte, "insert into danos values ")
+    s7 += descripcion(num_reporte, "insert into inspeccion_ambulancia.danos values ")
 
     temperatura = ["Frío","Medio","Caliente"]
     #otros datos
@@ -96,7 +98,7 @@ cn = psycopg2.connect(
     password="1234",
     host = "127.0.0.1",
     port = "5432",
-    database = "test2"
+    database = "unidad_transporte"
 )
 
 cursor = cn.cursor()

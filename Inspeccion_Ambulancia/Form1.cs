@@ -27,9 +27,6 @@ namespace Inspeccion_Ambulancia
         private void Form1_Load(object sender, EventArgs e)
         {
 
-
-
-
             //----------------- Modificacion codigo Santiago---------------
             //----------------- Cargar el nombre del Ingeniero Responsable----------
             om_firma_LServi_textBox.Text = "EDISON MONTESDEOCA";
