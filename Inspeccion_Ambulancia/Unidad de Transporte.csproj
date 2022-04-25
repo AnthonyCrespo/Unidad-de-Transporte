@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{CBE1FEFF-2DC2-40B7-9B87-D5F3763F9ED8}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Inspeccion_Ambulancia</RootNamespace>
-    <AssemblyName>Inspeccion_Ambulancia</AssemblyName>
+    <RootNamespace>Unidad_de_Transporte</RootNamespace>
+    <AssemblyName>Unidad de Transporte</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -232,6 +232,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="reporte.resx">
       <DependentUpon>reporte.cs</DependentUpon>
