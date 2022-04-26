@@ -31,7 +31,8 @@ El directorio Inspección de Ambulancia contiene:
 3. Imágenes del llenado del formulario en el hospital.
 
 **NOTA** 
-Las tablas limpieza, cabina_exterior, cabina_interior, docuemntos heredan la estructura de la tabla preguntas.
+
+Las tablas limpieza, cabina_exterior, cabina_interior, documentos heredan la estructura de la tabla preguntas.
 
 ### Repositorio 
 Para proporcionar acceso al repositorio original únicamente destinado al software Inspección de ambulancias, contactarse al correo brian.crespo@yachaytech.edu.ec.
