@@ -51,7 +51,7 @@ namespace Unidad_de_Transporte
             this.btn_1.Name = "btn_1";
             this.btn_1.Padding = new System.Windows.Forms.Padding(1);
             this.btn_1.Size = new System.Drawing.Size(309, 49);
-            this.btn_1.TabIndex = 0;
+            this.btn_1.TabIndex = 4;
             this.btn_1.Text = "Inspección de Ambulancia";
             this.btn_1.UseVisualStyleBackColor = true;
             this.btn_1.Click += new System.EventHandler(this.btn_1_Click);
@@ -63,7 +63,7 @@ namespace Unidad_de_Transporte
             this.btn_2.Name = "btn_2";
             this.btn_2.Padding = new System.Windows.Forms.Padding(1);
             this.btn_2.Size = new System.Drawing.Size(309, 49);
-            this.btn_2.TabIndex = 1;
+            this.btn_2.TabIndex = 5;
             this.btn_2.Text = "Observar reporte";
             this.btn_2.UseVisualStyleBackColor = true;
             this.btn_2.Click += new System.EventHandler(this.btn_2_Click);
@@ -93,33 +93,33 @@ namespace Unidad_de_Transporte
             // 
             // main_insertBtn
             // 
-            this.main_insertBtn.Location = new System.Drawing.Point(64, 206);
+            this.main_insertBtn.Location = new System.Drawing.Point(83, 209);
             this.main_insertBtn.Margin = new System.Windows.Forms.Padding(4);
             this.main_insertBtn.Name = "main_insertBtn";
             this.main_insertBtn.Size = new System.Drawing.Size(309, 49);
-            this.main_insertBtn.TabIndex = 18;
+            this.main_insertBtn.TabIndex = 0;
             this.main_insertBtn.Text = "Orden de Movilización";
             this.main_insertBtn.UseVisualStyleBackColor = true;
             this.main_insertBtn.Click += new System.EventHandler(this.main_insertBtn_Click);
             // 
             // main_informBtn
             // 
-            this.main_informBtn.Location = new System.Drawing.Point(64, 320);
+            this.main_informBtn.Location = new System.Drawing.Point(83, 323);
             this.main_informBtn.Margin = new System.Windows.Forms.Padding(4);
             this.main_informBtn.Name = "main_informBtn";
             this.main_informBtn.Size = new System.Drawing.Size(309, 49);
-            this.main_informBtn.TabIndex = 19;
+            this.main_informBtn.TabIndex = 3;
             this.main_informBtn.Text = "Informes y Hojas de Ruta";
             this.main_informBtn.UseVisualStyleBackColor = true;
             this.main_informBtn.Click += new System.EventHandler(this.main_informBtn_Click);
             // 
             // main_autBtn
             // 
-            this.main_autBtn.Location = new System.Drawing.Point(64, 263);
+            this.main_autBtn.Location = new System.Drawing.Point(83, 266);
             this.main_autBtn.Margin = new System.Windows.Forms.Padding(4);
             this.main_autBtn.Name = "main_autBtn";
             this.main_autBtn.Size = new System.Drawing.Size(309, 49);
-            this.main_autBtn.TabIndex = 20;
+            this.main_autBtn.TabIndex = 1;
             this.main_autBtn.Text = "Autorización de Salida";
             this.main_autBtn.UseVisualStyleBackColor = true;
             this.main_autBtn.Click += new System.EventHandler(this.main_autBtn_Click);
