@@ -40,8 +40,11 @@ namespace Unidad_de_Transporte
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_escudo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_msp)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_1
@@ -93,7 +96,7 @@ namespace Unidad_de_Transporte
             // 
             // main_insertBtn
             // 
-            this.main_insertBtn.Location = new System.Drawing.Point(83, 209);
+            this.main_insertBtn.Location = new System.Drawing.Point(35, 36);
             this.main_insertBtn.Margin = new System.Windows.Forms.Padding(4);
             this.main_insertBtn.Name = "main_insertBtn";
             this.main_insertBtn.Size = new System.Drawing.Size(309, 49);
@@ -104,7 +107,7 @@ namespace Unidad_de_Transporte
             // 
             // main_informBtn
             // 
-            this.main_informBtn.Location = new System.Drawing.Point(83, 323);
+            this.main_informBtn.Location = new System.Drawing.Point(35, 150);
             this.main_informBtn.Margin = new System.Windows.Forms.Padding(4);
             this.main_informBtn.Name = "main_informBtn";
             this.main_informBtn.Size = new System.Drawing.Size(309, 49);
@@ -115,7 +118,7 @@ namespace Unidad_de_Transporte
             // 
             // main_autBtn
             // 
-            this.main_autBtn.Location = new System.Drawing.Point(83, 266);
+            this.main_autBtn.Location = new System.Drawing.Point(35, 93);
             this.main_autBtn.Margin = new System.Windows.Forms.Padding(4);
             this.main_autBtn.Name = "main_autBtn";
             this.main_autBtn.Size = new System.Drawing.Size(309, 49);
@@ -144,7 +147,7 @@ namespace Unidad_de_Transporte
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(364, 31);
             this.label2.TabIndex = 23;
-            this.label2.Text = "Hospital San Vicente de Paul";
+            this.label2.Text = "Hospital San Vicente de Paúl";
             // 
             // label1
             // 
@@ -157,21 +160,40 @@ namespace Unidad_de_Transporte
             this.label1.TabIndex = 22;
             this.label1.Text = "Ministerio de Salud Pública";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.main_autBtn);
+            this.groupBox1.Controls.Add(this.main_informBtn);
+            this.groupBox1.Controls.Add(this.main_insertBtn);
+            this.groupBox1.Location = new System.Drawing.Point(48, 173);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(397, 226);
+            this.groupBox1.TabIndex = 25;
+            this.groupBox1.TabStop = false;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            this.groupBox3.Location = new System.Drawing.Point(451, 173);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(383, 226);
+            this.groupBox3.TabIndex = 26;
+            this.groupBox3.TabStop = false;
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(879, 458);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.main_autBtn);
-            this.Controls.Add(this.main_informBtn);
-            this.Controls.Add(this.main_insertBtn);
             this.Controls.Add(this.pic_escudo);
             this.Controls.Add(this.pic_msp);
             this.Controls.Add(this.btn_2);
             this.Controls.Add(this.btn_1);
+            this.Controls.Add(this.groupBox3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -179,6 +201,7 @@ namespace Unidad_de_Transporte
             this.Load += new System.EventHandler(this.main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_escudo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_msp)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,6 +219,8 @@ namespace Unidad_de_Transporte
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox3;
     }
 }
 
