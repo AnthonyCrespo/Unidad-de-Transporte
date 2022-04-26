@@ -21,6 +21,8 @@ Posteriormente se requiere editar el archivo main.cs, ubicado en el directorio U
 El archivo Unidad de Transporte.sln se ejecuta con Visual Studio. Este permite acceder a la edición de cada una de las ventanas, controles, y funciones del software. 
 
 ## Inspección de ambulancias
+En esta parte del software se desarrolló un programa que permita el llenado del formulario de Inspección Diaria de Ambulancias. Además de ello, una ventana que permite la búsqueda de reportes por No. de Reporte y Fecha, así como la visualización de dichos documentos.
+
 ### Archivos útiles
 El directorio Inspección de Ambulancia contiene:
 
@@ -39,3 +41,6 @@ pip install -r requirements.txt
 ~~~
 
 Se requiere además editar el archivo data_random.py para configurar las credenciales de la base de datos.
+
+## Trabajo Futuro
+Las futuras implementaciones que podrían realizarse consistirían en la implementación de una función para imprimir un reporte determinado, cuando este es generado.
