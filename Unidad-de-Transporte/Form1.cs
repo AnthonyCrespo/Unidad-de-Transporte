@@ -30,7 +30,6 @@ namespace Unidad_de_Transporte
             //----------------- Modificacion codigo Santiago---------------
             //----------------- Cargar el nombre del Ingeniero Responsable----------
             om_firma_LServi_textBox.Text = "EDISON MONTESDEOCA";
-            est_firma_TextBox.Text = "EDISON MONTESDEOCA";
             //------------------ Cargar las unidades Administrativas en el comboBOx
             om_unidad_comboBox.Items.Add("CENTRO QUIRÚRGICO");
             om_unidad_comboBox.Items.Add("CENTRO OBSTÉTRICO");
@@ -269,6 +268,7 @@ namespace Unidad_de_Transporte
             // habilitar controles requeridos solo si la solicitud es aprobada o caso contrario dejarlos vacíos
             if (est_solicitudComboBox.Text == "APROBADA")
             {
+                est_firma_TextBox.Text = "EDISON MONTESDEOCA";
                 est_vehiNumComboBox.Enabled = true;
                 est_conductComboBox.Enabled = true;
                 est_ParamTextBox.Enabled = true;
@@ -277,6 +277,7 @@ namespace Unidad_de_Transporte
             }
             else
             {
+                est_firma_TextBox.Text = "EDISON MONTESDEOCA";
                 est_vehiNumComboBox.Enabled = false;
                 est_vehiNumComboBox.Text = "";
                 est_codVehiTextBox.Text = "";
@@ -934,5 +935,6 @@ namespace Unidad_de_Transporte
         {
             e.Handled = true;
         }
+        
     }
 }

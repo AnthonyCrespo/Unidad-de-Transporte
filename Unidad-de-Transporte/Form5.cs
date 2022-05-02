@@ -24,7 +24,7 @@ namespace Unidad_de_Transporte
 
         private void Form5_Load(object sender, EventArgs e)
         {
-            string str = "Server = 127.0.0.1; Port=5432; Database=vehiculos; User Id=postgres; Password=1234;";
+            string str = "Server = 127.0.0.1; Port=5432; Database=unidad_transporte; User Id=postgres; Password=santiagoA0204;";
 
             cn.ConnectionString = str;
             cn.Open();

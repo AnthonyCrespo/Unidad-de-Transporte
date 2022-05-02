@@ -36,6 +36,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.InfMovBtn = new System.Windows.Forms.Button();
+            this.HojaRuBtn = new System.Windows.Forms.Button();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.cedConductorTBox = new System.Windows.Forms.TextBox();
             this.codVehiTBox = new System.Windows.Forms.TextBox();
@@ -58,8 +60,6 @@
             this.buscarNumBtn = new System.Windows.Forms.Button();
             this.resultsDataGrid = new System.Windows.Forms.DataGridView();
             this.label22 = new System.Windows.Forms.Label();
-            this.HojaRuBtn = new System.Windows.Forms.Button();
-            this.InfMovBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -160,6 +160,26 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Buscador";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // InfMovBtn
+            // 
+            this.InfMovBtn.Location = new System.Drawing.Point(676, 139);
+            this.InfMovBtn.Name = "InfMovBtn";
+            this.InfMovBtn.Size = new System.Drawing.Size(131, 43);
+            this.InfMovBtn.TabIndex = 28;
+            this.InfMovBtn.Text = "Informe Movilización";
+            this.InfMovBtn.UseVisualStyleBackColor = true;
+            this.InfMovBtn.Click += new System.EventHandler(this.InfMovBtn_Click);
+            // 
+            // HojaRuBtn
+            // 
+            this.HojaRuBtn.Location = new System.Drawing.Point(676, 198);
+            this.HojaRuBtn.Name = "HojaRuBtn";
+            this.HojaRuBtn.Size = new System.Drawing.Size(131, 24);
+            this.HojaRuBtn.TabIndex = 27;
+            this.HojaRuBtn.Text = "Hoja de Ruta";
+            this.HojaRuBtn.UseVisualStyleBackColor = true;
+            this.HojaRuBtn.Click += new System.EventHandler(this.HojaRuBtn_Click);
             // 
             // textBox13
             // 
@@ -408,26 +428,6 @@
             this.label22.TabIndex = 1;
             this.label22.Text = "Resultados de búsqueda:";
             // 
-            // HojaRuBtn
-            // 
-            this.HojaRuBtn.Location = new System.Drawing.Point(676, 198);
-            this.HojaRuBtn.Name = "HojaRuBtn";
-            this.HojaRuBtn.Size = new System.Drawing.Size(131, 24);
-            this.HojaRuBtn.TabIndex = 27;
-            this.HojaRuBtn.Text = "Hoja de Ruta";
-            this.HojaRuBtn.UseVisualStyleBackColor = true;
-            this.HojaRuBtn.Click += new System.EventHandler(this.HojaRuBtn_Click);
-            // 
-            // InfMovBtn
-            // 
-            this.InfMovBtn.Location = new System.Drawing.Point(676, 139);
-            this.InfMovBtn.Name = "InfMovBtn";
-            this.InfMovBtn.Size = new System.Drawing.Size(131, 43);
-            this.InfMovBtn.TabIndex = 28;
-            this.InfMovBtn.Text = "Informe Movilización";
-            this.InfMovBtn.UseVisualStyleBackColor = true;
-            this.InfMovBtn.Click += new System.EventHandler(this.InfMovBtn_Click);
-            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -443,6 +443,7 @@
             this.Name = "Form4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Informes y Hojas de Ruta";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
