@@ -139,10 +139,11 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.ItemSize = new System.Drawing.Size(76, 22);
-            this.tabControl1.Location = new System.Drawing.Point(11, 158);
+            this.tabControl1.Location = new System.Drawing.Point(15, 194);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1199, 550);
+            this.tabControl1.Size = new System.Drawing.Size(1599, 677);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -160,26 +161,29 @@
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 26);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage1.Size = new System.Drawing.Size(1191, 520);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Size = new System.Drawing.Size(1591, 647);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Formulario";
             // 
             // txtBox_Hos_Desti
             // 
             this.txtBox_Hos_Desti.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtBox_Hos_Desti.Location = new System.Drawing.Point(512, 467);
+            this.txtBox_Hos_Desti.Location = new System.Drawing.Point(683, 575);
+            this.txtBox_Hos_Desti.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_Hos_Desti.Name = "txtBox_Hos_Desti";
-            this.txtBox_Hos_Desti.Size = new System.Drawing.Size(104, 22);
+            this.txtBox_Hos_Desti.Size = new System.Drawing.Size(137, 26);
             this.txtBox_Hos_Desti.TabIndex = 22;
             // 
             // om_codNacTextBox
             // 
             this.om_codNacTextBox.Enabled = false;
-            this.om_codNacTextBox.Location = new System.Drawing.Point(755, 481);
+            this.om_codNacTextBox.Location = new System.Drawing.Point(1007, 592);
+            this.om_codNacTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.om_codNacTextBox.Name = "om_codNacTextBox";
-            this.om_codNacTextBox.Size = new System.Drawing.Size(84, 22);
+            this.om_codNacTextBox.Size = new System.Drawing.Size(111, 26);
             this.om_codNacTextBox.TabIndex = 8;
             this.om_codNacTextBox.Visible = false;
             // 
@@ -189,9 +193,11 @@
             this.groupBox6.Controls.Add(this.om_firma_LServi_textBox);
             this.groupBox6.Controls.Add(this.label26);
             this.groupBox6.Controls.Add(this.om_firma_solicitante_textBox);
-            this.groupBox6.Location = new System.Drawing.Point(650, 264);
+            this.groupBox6.Location = new System.Drawing.Point(867, 325);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(511, 194);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Size = new System.Drawing.Size(681, 239);
             this.groupBox6.TabIndex = 8;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "FIRMAS";
@@ -200,18 +206,20 @@
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(314, 126);
+            this.label34.Location = new System.Drawing.Point(419, 155);
+            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(165, 18);
+            this.label34.Size = new System.Drawing.Size(210, 24);
             this.label34.TabIndex = 3;
             this.label34.Text = "Lider Servicio (Nombre)";
             // 
             // om_firma_LServi_textBox
             // 
             this.om_firma_LServi_textBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.om_firma_LServi_textBox.Location = new System.Drawing.Point(282, 84);
+            this.om_firma_LServi_textBox.Location = new System.Drawing.Point(376, 103);
+            this.om_firma_LServi_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.om_firma_LServi_textBox.Name = "om_firma_LServi_textBox";
-            this.om_firma_LServi_textBox.Size = new System.Drawing.Size(223, 22);
+            this.om_firma_LServi_textBox.Size = new System.Drawing.Size(296, 26);
             this.om_firma_LServi_textBox.TabIndex = 2;
             this.om_firma_LServi_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.om_firma_LServi_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.om_firma_LServi_textBox_KeyPress);
@@ -220,18 +228,20 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(82, 126);
+            this.label26.Location = new System.Drawing.Point(109, 155);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(144, 18);
+            this.label26.Size = new System.Drawing.Size(181, 24);
             this.label26.TabIndex = 1;
             this.label26.Text = "Solicitante (Nombre)";
             // 
             // om_firma_solicitante_textBox
             // 
             this.om_firma_solicitante_textBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.om_firma_solicitante_textBox.Location = new System.Drawing.Point(34, 84);
+            this.om_firma_solicitante_textBox.Location = new System.Drawing.Point(45, 103);
+            this.om_firma_solicitante_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.om_firma_solicitante_textBox.Name = "om_firma_solicitante_textBox";
-            this.om_firma_solicitante_textBox.Size = new System.Drawing.Size(208, 22);
+            this.om_firma_solicitante_textBox.Size = new System.Drawing.Size(276, 26);
             this.om_firma_solicitante_textBox.TabIndex = 0;
             this.om_firma_solicitante_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.om_firma_solicitante_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.om_firma_solicitante_textBox_KeyPress);
@@ -239,9 +249,10 @@
             // om_codDestinoTextBox
             // 
             this.om_codDestinoTextBox.Enabled = false;
-            this.om_codDestinoTextBox.Location = new System.Drawing.Point(638, 481);
+            this.om_codDestinoTextBox.Location = new System.Drawing.Point(851, 592);
+            this.om_codDestinoTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.om_codDestinoTextBox.Name = "om_codDestinoTextBox";
-            this.om_codDestinoTextBox.Size = new System.Drawing.Size(100, 22);
+            this.om_codDestinoTextBox.Size = new System.Drawing.Size(132, 26);
             this.om_codDestinoTextBox.TabIndex = 18;
             this.om_codDestinoTextBox.Visible = false;
             // 
@@ -253,9 +264,11 @@
             this.groupBox4.Controls.Add(this.label22);
             this.groupBox4.Controls.Add(this.label23);
             this.groupBox4.Controls.Add(this.label24);
-            this.groupBox4.Location = new System.Drawing.Point(919, 62);
+            this.groupBox4.Location = new System.Drawing.Point(1225, 76);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(242, 188);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Size = new System.Drawing.Size(323, 231);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "ENTRADA";
@@ -264,37 +277,41 @@
             // 
             this.om_horaLlegadaBase.CustomFormat = "HH:mm";
             this.om_horaLlegadaBase.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.om_horaLlegadaBase.Location = new System.Drawing.Point(162, 103);
+            this.om_horaLlegadaBase.Location = new System.Drawing.Point(216, 127);
+            this.om_horaLlegadaBase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.om_horaLlegadaBase.Name = "om_horaLlegadaBase";
             this.om_horaLlegadaBase.ShowUpDown = true;
-            this.om_horaLlegadaBase.Size = new System.Drawing.Size(62, 22);
+            this.om_horaLlegadaBase.Size = new System.Drawing.Size(81, 26);
             this.om_horaLlegadaBase.TabIndex = 20;
             // 
             // om_horaLlegadaDestino
             // 
             this.om_horaLlegadaDestino.CustomFormat = "HH:mm";
             this.om_horaLlegadaDestino.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.om_horaLlegadaDestino.Location = new System.Drawing.Point(162, 50);
+            this.om_horaLlegadaDestino.Location = new System.Drawing.Point(216, 62);
+            this.om_horaLlegadaDestino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.om_horaLlegadaDestino.Name = "om_horaLlegadaDestino";
             this.om_horaLlegadaDestino.ShowUpDown = true;
-            this.om_horaLlegadaDestino.Size = new System.Drawing.Size(62, 22);
+            this.om_horaLlegadaDestino.Size = new System.Drawing.Size(81, 26);
             this.om_horaLlegadaDestino.TabIndex = 19;
             // 
             // om_fechaEntrada
             // 
             this.om_fechaEntrada.CustomFormat = "yyyy-MM-dd";
             this.om_fechaEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.om_fechaEntrada.Location = new System.Drawing.Point(20, 149);
+            this.om_fechaEntrada.Location = new System.Drawing.Point(27, 183);
+            this.om_fechaEntrada.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.om_fechaEntrada.Name = "om_fechaEntrada";
-            this.om_fechaEntrada.Size = new System.Drawing.Size(204, 22);
+            this.om_fechaEntrada.Size = new System.Drawing.Size(271, 26);
             this.om_fechaEntrada.TabIndex = 18;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(17, 29);
+            this.label22.Location = new System.Drawing.Point(23, 36);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(161, 16);
+            this.label22.Size = new System.Drawing.Size(201, 20);
             this.label22.TabIndex = 5;
             this.label22.Text = "Hora de Llegada Destino:";
             // 
@@ -302,18 +319,20 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(17, 79);
+            this.label23.Location = new System.Drawing.Point(23, 97);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(159, 16);
+            this.label23.Size = new System.Drawing.Size(193, 20);
             this.label23.TabIndex = 6;
             this.label23.Text = "Hora Llegada a Base:";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(17, 130);
+            this.label24.Location = new System.Drawing.Point(23, 160);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(48, 16);
+            this.label24.Size = new System.Drawing.Size(60, 20);
             this.label24.TabIndex = 7;
             this.label24.Text = "Fecha:";
             // 
@@ -326,9 +345,11 @@
             this.groupBox3.Controls.Add(this.label19);
             this.groupBox3.Controls.Add(this.label18);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(650, 62);
+            this.groupBox3.Location = new System.Drawing.Point(867, 76);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(242, 190);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Size = new System.Drawing.Size(323, 234);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "SALIDA";
@@ -337,46 +358,51 @@
             // 
             this.om_horaSalidaDestino.CustomFormat = "HH:mm";
             this.om_horaSalidaDestino.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.om_horaSalidaDestino.Location = new System.Drawing.Point(163, 103);
+            this.om_horaSalidaDestino.Location = new System.Drawing.Point(217, 127);
+            this.om_horaSalidaDestino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.om_horaSalidaDestino.Name = "om_horaSalidaDestino";
             this.om_horaSalidaDestino.ShowUpDown = true;
-            this.om_horaSalidaDestino.Size = new System.Drawing.Size(61, 22);
+            this.om_horaSalidaDestino.Size = new System.Drawing.Size(80, 26);
             this.om_horaSalidaDestino.TabIndex = 12;
             // 
             // om_horaSalidaBase
             // 
             this.om_horaSalidaBase.CustomFormat = "HH:mm";
             this.om_horaSalidaBase.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.om_horaSalidaBase.Location = new System.Drawing.Point(163, 50);
+            this.om_horaSalidaBase.Location = new System.Drawing.Point(217, 62);
+            this.om_horaSalidaBase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.om_horaSalidaBase.Name = "om_horaSalidaBase";
             this.om_horaSalidaBase.ShowUpDown = true;
-            this.om_horaSalidaBase.Size = new System.Drawing.Size(61, 22);
+            this.om_horaSalidaBase.Size = new System.Drawing.Size(80, 26);
             this.om_horaSalidaBase.TabIndex = 11;
             // 
             // om_fechaSalida
             // 
             this.om_fechaSalida.CustomFormat = "yyyy-MM-dd";
             this.om_fechaSalida.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.om_fechaSalida.Location = new System.Drawing.Point(20, 147);
+            this.om_fechaSalida.Location = new System.Drawing.Point(27, 181);
+            this.om_fechaSalida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.om_fechaSalida.Name = "om_fechaSalida";
-            this.om_fechaSalida.Size = new System.Drawing.Size(204, 22);
+            this.om_fechaSalida.Size = new System.Drawing.Size(271, 26);
             this.om_fechaSalida.TabIndex = 10;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(17, 125);
+            this.label20.Location = new System.Drawing.Point(23, 154);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(48, 16);
+            this.label20.Size = new System.Drawing.Size(60, 20);
             this.label20.TabIndex = 3;
             this.label20.Text = "Fecha:";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(17, 75);
+            this.label19.Location = new System.Drawing.Point(23, 92);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(131, 16);
+            this.label19.Size = new System.Drawing.Size(165, 20);
             this.label19.TabIndex = 2;
             this.label19.Text = "Hora Salida Destino:";
             // 
@@ -384,9 +410,10 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(17, 27);
+            this.label18.Location = new System.Drawing.Point(23, 33);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(134, 16);
+            this.label18.Size = new System.Drawing.Size(163, 20);
             this.label18.TabIndex = 1;
             this.label18.Text = "Hora Salida Base:";
             // 
@@ -412,9 +439,11 @@
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(21, 276);
+            this.groupBox2.Location = new System.Drawing.Point(28, 340);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(601, 227);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(801, 279);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Sección 2. Info Paciente";
@@ -422,27 +451,30 @@
             // txtBox_UnidadM
             // 
             this.txtBox_UnidadM.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtBox_UnidadM.Location = new System.Drawing.Point(121, 194);
+            this.txtBox_UnidadM.Location = new System.Drawing.Point(161, 239);
+            this.txtBox_UnidadM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_UnidadM.MaxLength = 100;
             this.txtBox_UnidadM.Name = "txtBox_UnidadM";
-            this.txtBox_UnidadM.Size = new System.Drawing.Size(225, 22);
+            this.txtBox_UnidadM.Size = new System.Drawing.Size(299, 26);
             this.txtBox_UnidadM.TabIndex = 22;
             // 
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(13, 197);
+            this.label38.Location = new System.Drawing.Point(17, 242);
+            this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(102, 16);
+            this.label38.Size = new System.Drawing.Size(125, 20);
             this.label38.TabIndex = 21;
             this.label38.Text = "Unidad Médica:";
             // 
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(352, 194);
+            this.label39.Location = new System.Drawing.Point(469, 239);
+            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(133, 16);
+            this.label39.Size = new System.Drawing.Size(165, 20);
             this.label39.TabIndex = 20;
             this.label39.Text = "Cuidad de ubicación:";
             // 
@@ -450,9 +482,10 @@
             // 
             this.om_serviciocomboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.om_serviciocomboBox.FormattingEnabled = true;
-            this.om_serviciocomboBox.Location = new System.Drawing.Point(102, 86);
+            this.om_serviciocomboBox.Location = new System.Drawing.Point(136, 106);
+            this.om_serviciocomboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.om_serviciocomboBox.Name = "om_serviciocomboBox";
-            this.om_serviciocomboBox.Size = new System.Drawing.Size(205, 24);
+            this.om_serviciocomboBox.Size = new System.Drawing.Size(272, 28);
             this.om_serviciocomboBox.Sorted = true;
             this.om_serviciocomboBox.TabIndex = 18;
             this.om_serviciocomboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.om_serviciocomboBox_KeyPress);
@@ -460,9 +493,10 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(270, 163);
+            this.label16.Location = new System.Drawing.Point(360, 201);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(79, 16);
+            this.label16.Size = new System.Drawing.Size(98, 20);
             this.label16.TabIndex = 17;
             this.label16.Text = "Traslado a: ";
             // 
@@ -470,10 +504,11 @@
             // 
             this.om_traslado_comboBox.Enabled = false;
             this.om_traslado_comboBox.FormattingEnabled = true;
-            this.om_traslado_comboBox.Location = new System.Drawing.Point(355, 160);
+            this.om_traslado_comboBox.Location = new System.Drawing.Point(473, 197);
+            this.om_traslado_comboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.om_traslado_comboBox.MaxLength = 50;
             this.om_traslado_comboBox.Name = "om_traslado_comboBox";
-            this.om_traslado_comboBox.Size = new System.Drawing.Size(240, 24);
+            this.om_traslado_comboBox.Size = new System.Drawing.Size(319, 28);
             this.om_traslado_comboBox.TabIndex = 16;
             this.om_traslado_comboBox.SelectedIndexChanged += new System.EventHandler(this.om_traslado_comboBox_SelectedIndexChanged);
             this.om_traslado_comboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.om_traslado_comboBox_KeyPress_1);
@@ -482,9 +517,10 @@
             // 
             this.om_paciente_textBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.om_paciente_textBox.Enabled = false;
-            this.om_paciente_textBox.Location = new System.Drawing.Point(158, 21);
+            this.om_paciente_textBox.Location = new System.Drawing.Point(211, 26);
+            this.om_paciente_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.om_paciente_textBox.Name = "om_paciente_textBox";
-            this.om_paciente_textBox.Size = new System.Drawing.Size(437, 22);
+            this.om_paciente_textBox.Size = new System.Drawing.Size(581, 26);
             this.om_paciente_textBox.TabIndex = 15;
             this.om_paciente_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.om_paciente_textBox_KeyPress);
             // 
@@ -492,10 +528,11 @@
             // 
             this.om_cie_comboBox.Enabled = false;
             this.om_cie_comboBox.FormattingEnabled = true;
-            this.om_cie_comboBox.Location = new System.Drawing.Point(102, 160);
+            this.om_cie_comboBox.Location = new System.Drawing.Point(136, 197);
+            this.om_cie_comboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.om_cie_comboBox.MaxLength = 4;
             this.om_cie_comboBox.Name = "om_cie_comboBox";
-            this.om_cie_comboBox.Size = new System.Drawing.Size(165, 24);
+            this.om_cie_comboBox.Size = new System.Drawing.Size(219, 28);
             this.om_cie_comboBox.TabIndex = 13;
             this.om_cie_comboBox.SelectedIndexChanged += new System.EventHandler(this.om_cie_comboBox_SelectedIndexChanged);
             this.om_cie_comboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.om_cie_comboBox_KeyPress);
@@ -504,9 +541,10 @@
             // 
             this.om_diag_textBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.om_diag_textBox.Enabled = false;
-            this.om_diag_textBox.Location = new System.Drawing.Point(102, 124);
+            this.om_diag_textBox.Location = new System.Drawing.Point(136, 153);
+            this.om_diag_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.om_diag_textBox.Name = "om_diag_textBox";
-            this.om_diag_textBox.Size = new System.Drawing.Size(493, 22);
+            this.om_diag_textBox.Size = new System.Drawing.Size(656, 26);
             this.om_diag_textBox.TabIndex = 12;
             // 
             // om_nac_comboBox
@@ -515,92 +553,102 @@
             this.om_nac_comboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.om_nac_comboBox.Enabled = false;
             this.om_nac_comboBox.FormattingEnabled = true;
-            this.om_nac_comboBox.Location = new System.Drawing.Point(421, 52);
+            this.om_nac_comboBox.Location = new System.Drawing.Point(561, 64);
+            this.om_nac_comboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.om_nac_comboBox.Name = "om_nac_comboBox";
-            this.om_nac_comboBox.Size = new System.Drawing.Size(174, 24);
+            this.om_nac_comboBox.Size = new System.Drawing.Size(231, 28);
             this.om_nac_comboBox.TabIndex = 11;
             this.om_nac_comboBox.SelectedIndexChanged += new System.EventHandler(this.om_nac_comboBox_SelectedIndexChanged);
             this.om_nac_comboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.om_nac_comboBox_KeyPress);
             // 
             // om_ci_textBox
             // 
-            this.om_ci_textBox.Location = new System.Drawing.Point(421, 89);
+            this.om_ci_textBox.Location = new System.Drawing.Point(561, 110);
+            this.om_ci_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.om_ci_textBox.MaxLength = 10;
             this.om_ci_textBox.Name = "om_ci_textBox";
-            this.om_ci_textBox.Size = new System.Drawing.Size(174, 22);
+            this.om_ci_textBox.Size = new System.Drawing.Size(231, 26);
             this.om_ci_textBox.TabIndex = 10;
             this.om_ci_textBox.TextChanged += new System.EventHandler(this.om_ci_textBox_TextChanged);
             // 
             // om_edad_textBox
             // 
             this.om_edad_textBox.Enabled = false;
-            this.om_edad_textBox.Location = new System.Drawing.Point(102, 54);
+            this.om_edad_textBox.Location = new System.Drawing.Point(136, 66);
+            this.om_edad_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.om_edad_textBox.MaxLength = 3;
             this.om_edad_textBox.Name = "om_edad_textBox";
-            this.om_edad_textBox.Size = new System.Drawing.Size(205, 22);
+            this.om_edad_textBox.Size = new System.Drawing.Size(272, 26);
             this.om_edad_textBox.TabIndex = 8;
             this.om_edad_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.om_edad_textBox_KeyPress);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(13, 163);
+            this.label15.Location = new System.Drawing.Point(17, 201);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(31, 16);
+            this.label15.Size = new System.Drawing.Size(41, 20);
             this.label15.TabIndex = 6;
             this.label15.Text = "CIE:";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(13, 127);
+            this.label14.Location = new System.Drawing.Point(17, 156);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(82, 16);
+            this.label14.Size = new System.Drawing.Size(103, 20);
             this.label14.TabIndex = 5;
             this.label14.Text = "Diagnóstico:";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(313, 89);
+            this.label13.Location = new System.Drawing.Point(417, 110);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(25, 16);
+            this.label13.Size = new System.Drawing.Size(34, 20);
             this.label13.TabIndex = 4;
             this.label13.Text = "C.I:";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(313, 57);
+            this.label12.Location = new System.Drawing.Point(417, 70);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(91, 16);
+            this.label12.Size = new System.Drawing.Size(110, 20);
             this.label12.TabIndex = 3;
             this.label12.Text = "Nacionalidad:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(13, 89);
+            this.label11.Location = new System.Drawing.Point(17, 110);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(59, 16);
+            this.label11.Size = new System.Drawing.Size(74, 20);
             this.label11.TabIndex = 2;
             this.label11.Text = "Servicio:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(13, 57);
+            this.label10.Location = new System.Drawing.Point(17, 70);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(43, 16);
+            this.label10.Size = new System.Drawing.Size(52, 20);
             this.label10.TabIndex = 1;
             this.label10.Text = "Edad:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(13, 24);
+            this.label9.Location = new System.Drawing.Point(17, 30);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(137, 16);
+            this.label9.Size = new System.Drawing.Size(170, 20);
             this.label9.TabIndex = 0;
             this.label9.Text = "Nombre del Paciente:\r\n";
             // 
@@ -621,9 +669,11 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(21, 46);
+            this.groupBox1.Location = new System.Drawing.Point(28, 57);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(601, 224);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(801, 276);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Seccion 1. Datos";
@@ -631,9 +681,10 @@
             // om_unidad_comboBox
             // 
             this.om_unidad_comboBox.FormattingEnabled = true;
-            this.om_unidad_comboBox.Location = new System.Drawing.Point(171, 113);
+            this.om_unidad_comboBox.Location = new System.Drawing.Point(228, 139);
+            this.om_unidad_comboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.om_unidad_comboBox.Name = "om_unidad_comboBox";
-            this.om_unidad_comboBox.Size = new System.Drawing.Size(424, 24);
+            this.om_unidad_comboBox.Size = new System.Drawing.Size(564, 28);
             this.om_unidad_comboBox.Sorted = true;
             this.om_unidad_comboBox.TabIndex = 14;
             this.om_unidad_comboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.om_unidad_comboBox_KeyPress);
@@ -641,27 +692,30 @@
             // txBox_Destino
             // 
             this.txBox_Destino.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txBox_Destino.Location = new System.Drawing.Point(447, 185);
+            this.txBox_Destino.Location = new System.Drawing.Point(596, 228);
+            this.txBox_Destino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txBox_Destino.Name = "txBox_Destino";
-            this.txBox_Destino.Size = new System.Drawing.Size(148, 22);
+            this.txBox_Destino.Size = new System.Drawing.Size(196, 26);
             this.txBox_Destino.TabIndex = 13;
             this.txBox_Destino.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txBox_Destino_KeyPress);
             // 
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(274, 190);
+            this.label37.Location = new System.Drawing.Point(365, 234);
+            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(164, 16);
+            this.label37.Size = new System.Drawing.Size(207, 20);
             this.label37.TabIndex = 12;
             this.label37.Text = "Ingrese la Ciudad Destino:";
             // 
             // cbo_MovPaciente
             // 
             this.cbo_MovPaciente.FormattingEnabled = true;
-            this.cbo_MovPaciente.Location = new System.Drawing.Point(171, 185);
+            this.cbo_MovPaciente.Location = new System.Drawing.Point(228, 228);
+            this.cbo_MovPaciente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbo_MovPaciente.Name = "cbo_MovPaciente";
-            this.cbo_MovPaciente.Size = new System.Drawing.Size(78, 24);
+            this.cbo_MovPaciente.Size = new System.Drawing.Size(103, 28);
             this.cbo_MovPaciente.TabIndex = 11;
             this.cbo_MovPaciente.SelectedIndexChanged += new System.EventHandler(this.cbo_MovPaciente_SelectedIndexChanged);
             this.cbo_MovPaciente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbo_MovPaciente_KeyPress);
@@ -669,43 +723,48 @@
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(13, 188);
+            this.label36.Location = new System.Drawing.Point(17, 231);
+            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(146, 16);
+            this.label36.Size = new System.Drawing.Size(184, 20);
             this.label36.TabIndex = 10;
             this.label36.Text = "Moviliza a un paciente?";
             // 
             // om_cargo_textBox
             // 
             this.om_cargo_textBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.om_cargo_textBox.Location = new System.Drawing.Point(171, 82);
+            this.om_cargo_textBox.Location = new System.Drawing.Point(228, 101);
+            this.om_cargo_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.om_cargo_textBox.Name = "om_cargo_textBox";
-            this.om_cargo_textBox.Size = new System.Drawing.Size(424, 22);
+            this.om_cargo_textBox.Size = new System.Drawing.Size(564, 26);
             this.om_cargo_textBox.TabIndex = 9;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(13, 88);
+            this.label25.Location = new System.Drawing.Point(17, 108);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(47, 16);
+            this.label25.Size = new System.Drawing.Size(59, 20);
             this.label25.TabIndex = 8;
             this.label25.Text = "Cargo:";
             // 
             // om_motivo_textBox
             // 
             this.om_motivo_textBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.om_motivo_textBox.Location = new System.Drawing.Point(171, 141);
+            this.om_motivo_textBox.Location = new System.Drawing.Point(228, 174);
+            this.om_motivo_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.om_motivo_textBox.Name = "om_motivo_textBox";
-            this.om_motivo_textBox.Size = new System.Drawing.Size(424, 22);
+            this.om_motivo_textBox.Size = new System.Drawing.Size(564, 26);
             this.om_motivo_textBox.TabIndex = 7;
             // 
             // om_solicitantetextBox
             // 
             this.om_solicitantetextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.om_solicitantetextBox.Location = new System.Drawing.Point(171, 50);
+            this.om_solicitantetextBox.Location = new System.Drawing.Point(228, 62);
+            this.om_solicitantetextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.om_solicitantetextBox.Name = "om_solicitantetextBox";
-            this.om_solicitantetextBox.Size = new System.Drawing.Size(424, 22);
+            this.om_solicitantetextBox.Size = new System.Drawing.Size(564, 26);
             this.om_solicitantetextBox.TabIndex = 5;
             this.om_solicitantetextBox.TextChanged += new System.EventHandler(this.om_solicitantetextBox_TextChanged);
             this.om_solicitantetextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.om_solicitantetextBox_KeyPress);
@@ -714,63 +773,70 @@
             // 
             this.om_datePicker.CustomFormat = "yyyy-MM-dd";
             this.om_datePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.om_datePicker.Location = new System.Drawing.Point(171, 21);
+            this.om_datePicker.Location = new System.Drawing.Point(228, 26);
+            this.om_datePicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.om_datePicker.Name = "om_datePicker";
-            this.om_datePicker.Size = new System.Drawing.Size(262, 22);
+            this.om_datePicker.Size = new System.Drawing.Size(348, 26);
             this.om_datePicker.TabIndex = 4;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(13, 147);
+            this.label8.Location = new System.Drawing.Point(17, 181);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(50, 16);
+            this.label8.Size = new System.Drawing.Size(63, 20);
             this.label8.TabIndex = 3;
             this.label8.Text = "Motivo:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(13, 119);
+            this.label7.Location = new System.Drawing.Point(17, 146);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(141, 16);
+            this.label7.Size = new System.Drawing.Size(177, 20);
             this.label7.TabIndex = 2;
             this.label7.Text = "Unidad Administrativa:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 53);
+            this.label6.Location = new System.Drawing.Point(17, 65);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(151, 16);
+            this.label6.Size = new System.Drawing.Size(190, 20);
             this.label6.TabIndex = 1;
             this.label6.Text = "Nombres del solicitante:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 27);
+            this.label5.Location = new System.Drawing.Point(17, 33);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 16);
+            this.label5.Size = new System.Drawing.Size(60, 20);
             this.label5.TabIndex = 0;
             this.label5.Text = "Fecha:";
             // 
             // om_num_tbox
             // 
             this.om_num_tbox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.om_num_tbox.Location = new System.Drawing.Point(220, 18);
+            this.om_num_tbox.Location = new System.Drawing.Point(293, 22);
+            this.om_num_tbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.om_num_tbox.MaxLength = 20;
             this.om_num_tbox.Name = "om_num_tbox";
-            this.om_num_tbox.Size = new System.Drawing.Size(108, 22);
+            this.om_num_tbox.Size = new System.Drawing.Size(143, 26);
             this.om_num_tbox.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(47, 21);
+            this.label4.Location = new System.Drawing.Point(63, 26);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(157, 16);
+            this.label4.Size = new System.Drawing.Size(199, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "Orden de Movilización N°";
             // 
@@ -798,9 +864,10 @@
             this.tabPage2.Controls.Add(this.label21);
             this.tabPage2.Controls.Add(this.groupBox5);
             this.tabPage2.Location = new System.Drawing.Point(4, 26);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage2.Size = new System.Drawing.Size(1191, 520);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Size = new System.Drawing.Size(1591, 647);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Estado";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -808,18 +875,20 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(374, 313);
+            this.label35.Location = new System.Drawing.Point(499, 385);
+            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(332, 16);
+            this.label35.Size = new System.Drawing.Size(410, 20);
             this.label35.TabIndex = 28;
             this.label35.Text = "Autorizado Responsable Unidad Transporte (Nombre)";
             // 
             // est_firma_TextBox
             // 
             this.est_firma_TextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.est_firma_TextBox.Location = new System.Drawing.Point(393, 278);
+            this.est_firma_TextBox.Location = new System.Drawing.Point(524, 342);
+            this.est_firma_TextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.est_firma_TextBox.Name = "est_firma_TextBox";
-            this.est_firma_TextBox.Size = new System.Drawing.Size(297, 22);
+            this.est_firma_TextBox.Size = new System.Drawing.Size(395, 26);
             this.est_firma_TextBox.TabIndex = 27;
             this.est_firma_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.est_firma_TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.est_firma_TextBox_KeyPress);
@@ -827,27 +896,30 @@
             // est_cedConductorTextBox
             // 
             this.est_cedConductorTextBox.Enabled = false;
-            this.est_cedConductorTextBox.Location = new System.Drawing.Point(818, 85);
+            this.est_cedConductorTextBox.Location = new System.Drawing.Point(1091, 105);
+            this.est_cedConductorTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.est_cedConductorTextBox.Name = "est_cedConductorTextBox";
-            this.est_cedConductorTextBox.Size = new System.Drawing.Size(100, 22);
+            this.est_cedConductorTextBox.Size = new System.Drawing.Size(132, 26);
             this.est_cedConductorTextBox.TabIndex = 26;
             this.est_cedConductorTextBox.Visible = false;
             // 
             // est_codVehiTextBox
             // 
             this.est_codVehiTextBox.Enabled = false;
-            this.est_codVehiTextBox.Location = new System.Drawing.Point(1059, 43);
+            this.est_codVehiTextBox.Location = new System.Drawing.Point(1412, 53);
+            this.est_codVehiTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.est_codVehiTextBox.Name = "est_codVehiTextBox";
-            this.est_codVehiTextBox.Size = new System.Drawing.Size(100, 22);
+            this.est_codVehiTextBox.Size = new System.Drawing.Size(132, 26);
             this.est_codVehiTextBox.TabIndex = 25;
             this.est_codVehiTextBox.Visible = false;
             // 
             // est_gruardarBtn
             // 
             this.est_gruardarBtn.Enabled = false;
-            this.est_gruardarBtn.Location = new System.Drawing.Point(1059, 306);
+            this.est_gruardarBtn.Location = new System.Drawing.Point(1412, 377);
+            this.est_gruardarBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.est_gruardarBtn.Name = "est_gruardarBtn";
-            this.est_gruardarBtn.Size = new System.Drawing.Size(75, 23);
+            this.est_gruardarBtn.Size = new System.Drawing.Size(100, 28);
             this.est_gruardarBtn.TabIndex = 24;
             this.est_gruardarBtn.Text = "Guardar";
             this.est_gruardarBtn.UseVisualStyleBackColor = true;
@@ -856,18 +928,20 @@
             // est_vehiClassTextBox
             // 
             this.est_vehiClassTextBox.Enabled = false;
-            this.est_vehiClassTextBox.Location = new System.Drawing.Point(410, 40);
+            this.est_vehiClassTextBox.Location = new System.Drawing.Point(547, 49);
+            this.est_vehiClassTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.est_vehiClassTextBox.Name = "est_vehiClassTextBox";
-            this.est_vehiClassTextBox.Size = new System.Drawing.Size(138, 22);
+            this.est_vehiClassTextBox.Size = new System.Drawing.Size(183, 26);
             this.est_vehiClassTextBox.TabIndex = 23;
             // 
             // est_vehiNumComboBox
             // 
             this.est_vehiNumComboBox.Enabled = false;
             this.est_vehiNumComboBox.FormattingEnabled = true;
-            this.est_vehiNumComboBox.Location = new System.Drawing.Point(653, 40);
+            this.est_vehiNumComboBox.Location = new System.Drawing.Point(871, 49);
+            this.est_vehiNumComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.est_vehiNumComboBox.Name = "est_vehiNumComboBox";
-            this.est_vehiNumComboBox.Size = new System.Drawing.Size(121, 24);
+            this.est_vehiNumComboBox.Size = new System.Drawing.Size(160, 28);
             this.est_vehiNumComboBox.TabIndex = 22;
             this.est_vehiNumComboBox.SelectedIndexChanged += new System.EventHandler(this.est_vehiNumComboBox_SelectedIndexChanged);
             this.est_vehiNumComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.est_vehiNumComboBox_KeyPress);
@@ -878,9 +952,10 @@
             this.est_conductComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.est_conductComboBox.Enabled = false;
             this.est_conductComboBox.FormattingEnabled = true;
-            this.est_conductComboBox.Location = new System.Drawing.Point(410, 85);
+            this.est_conductComboBox.Location = new System.Drawing.Point(547, 105);
+            this.est_conductComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.est_conductComboBox.Name = "est_conductComboBox";
-            this.est_conductComboBox.Size = new System.Drawing.Size(364, 24);
+            this.est_conductComboBox.Size = new System.Drawing.Size(484, 28);
             this.est_conductComboBox.TabIndex = 21;
             this.est_conductComboBox.SelectedIndexChanged += new System.EventHandler(this.est_conductComboBox_SelectedIndexChanged);
             // 
@@ -888,17 +963,19 @@
             // 
             this.est_datePicker.CustomFormat = "yyyy-MM-dd";
             this.est_datePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.est_datePicker.Location = new System.Drawing.Point(410, 208);
+            this.est_datePicker.Location = new System.Drawing.Point(547, 256);
+            this.est_datePicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.est_datePicker.Name = "est_datePicker";
-            this.est_datePicker.Size = new System.Drawing.Size(238, 22);
+            this.est_datePicker.Size = new System.Drawing.Size(316, 26);
             this.est_datePicker.TabIndex = 18;
             // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(270, 208);
+            this.label33.Location = new System.Drawing.Point(360, 256);
+            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(48, 16);
+            this.label33.Size = new System.Drawing.Size(60, 20);
             this.label33.TabIndex = 17;
             this.label33.Text = "Fecha:";
             // 
@@ -906,9 +983,10 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(407, 183);
+            this.label32.Location = new System.Drawing.Point(543, 225);
+            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(224, 13);
+            this.label32.Size = new System.Drawing.Size(301, 17);
             this.label32.TabIndex = 16;
             this.label32.Text = "NOTA: Adjuntar hoja de referencia obligatoria.";
             // 
@@ -916,27 +994,30 @@
             // 
             this.est_obsTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.est_obsTextBox.Enabled = false;
-            this.est_obsTextBox.Location = new System.Drawing.Point(410, 158);
+            this.est_obsTextBox.Location = new System.Drawing.Point(547, 194);
+            this.est_obsTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.est_obsTextBox.Name = "est_obsTextBox";
-            this.est_obsTextBox.Size = new System.Drawing.Size(749, 22);
+            this.est_obsTextBox.Size = new System.Drawing.Size(997, 26);
             this.est_obsTextBox.TabIndex = 15;
             this.est_obsTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.est_obsTextBox_KeyPress);
             // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(270, 161);
+            this.label31.Location = new System.Drawing.Point(360, 198);
+            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(102, 16);
+            this.label31.Size = new System.Drawing.Size(126, 20);
             this.label31.TabIndex = 14;
             this.label31.Text = "Observaciones:";
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(270, 123);
+            this.label30.Location = new System.Drawing.Point(360, 151);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(84, 16);
+            this.label30.Size = new System.Drawing.Size(103, 20);
             this.label30.TabIndex = 13;
             this.label30.Text = "Paramédico:";
             // 
@@ -944,18 +1025,20 @@
             // 
             this.est_ParamTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.est_ParamTextBox.Enabled = false;
-            this.est_ParamTextBox.Location = new System.Drawing.Point(410, 123);
+            this.est_ParamTextBox.Location = new System.Drawing.Point(547, 151);
+            this.est_ParamTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.est_ParamTextBox.Name = "est_ParamTextBox";
-            this.est_ParamTextBox.Size = new System.Drawing.Size(364, 22);
+            this.est_ParamTextBox.Size = new System.Drawing.Size(484, 26);
             this.est_ParamTextBox.TabIndex = 12;
             this.est_ParamTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox15_KeyPress);
             // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(268, 85);
+            this.label29.Location = new System.Drawing.Point(357, 105);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(71, 16);
+            this.label29.Size = new System.Drawing.Size(91, 20);
             this.label29.TabIndex = 10;
             this.label29.Text = "Conductor:";
             // 
@@ -963,36 +1046,40 @@
             // 
             this.est_placaTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.est_placaTextBox.Enabled = false;
-            this.est_placaTextBox.Location = new System.Drawing.Point(892, 42);
+            this.est_placaTextBox.Location = new System.Drawing.Point(1189, 52);
+            this.est_placaTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.est_placaTextBox.Name = "est_placaTextBox";
-            this.est_placaTextBox.Size = new System.Drawing.Size(121, 22);
+            this.est_placaTextBox.Size = new System.Drawing.Size(160, 26);
             this.est_placaTextBox.TabIndex = 8;
             this.est_placaTextBox.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(815, 45);
+            this.label28.Location = new System.Drawing.Point(1087, 55);
+            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(62, 16);
+            this.label28.Size = new System.Drawing.Size(80, 20);
             this.label28.TabIndex = 7;
             this.label28.Text = "Placa N°:";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(606, 45);
+            this.label27.Location = new System.Drawing.Point(808, 55);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(24, 16);
+            this.label27.Size = new System.Drawing.Size(33, 20);
             this.label27.TabIndex = 6;
             this.label27.Text = "N°:";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(268, 45);
+            this.label21.Location = new System.Drawing.Point(357, 55);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(123, 16);
+            this.label21.Size = new System.Drawing.Size(152, 20);
             this.label21.TabIndex = 5;
             this.label21.Text = "Vehiculo Asignado:";
             // 
@@ -1000,9 +1087,11 @@
             // 
             this.groupBox5.Controls.Add(this.est_solicitudComboBox);
             this.groupBox5.Controls.Add(this.label17);
-            this.groupBox5.Location = new System.Drawing.Point(16, 21);
+            this.groupBox5.Location = new System.Drawing.Point(21, 26);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(230, 80);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Size = new System.Drawing.Size(307, 98);
             this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Estatus";
@@ -1010,9 +1099,10 @@
             // est_solicitudComboBox
             // 
             this.est_solicitudComboBox.FormattingEnabled = true;
-            this.est_solicitudComboBox.Location = new System.Drawing.Point(93, 28);
+            this.est_solicitudComboBox.Location = new System.Drawing.Point(124, 34);
+            this.est_solicitudComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.est_solicitudComboBox.Name = "est_solicitudComboBox";
-            this.est_solicitudComboBox.Size = new System.Drawing.Size(121, 24);
+            this.est_solicitudComboBox.Size = new System.Drawing.Size(160, 28);
             this.est_solicitudComboBox.TabIndex = 1;
             this.est_solicitudComboBox.SelectedIndexChanged += new System.EventHandler(this.est_solicitudComboBox_SelectedIndexChanged);
             this.est_solicitudComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.est_solicitudComboBox_KeyPress);
@@ -1020,9 +1110,10 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(24, 28);
+            this.label17.Location = new System.Drawing.Point(32, 34);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(61, 16);
+            this.label17.Size = new System.Drawing.Size(78, 20);
             this.label17.TabIndex = 0;
             this.label17.Text = "Solicitud:";
             // 
@@ -1030,9 +1121,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(496, 51);
+            this.label1.Location = new System.Drawing.Point(661, 63);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(273, 25);
+            this.label1.Size = new System.Drawing.Size(339, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "Ministerio de Salud Pública";
             // 
@@ -1040,9 +1132,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(487, 90);
+            this.label2.Location = new System.Drawing.Point(649, 111);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(291, 25);
+            this.label2.Size = new System.Drawing.Size(364, 31);
             this.label2.TabIndex = 2;
             this.label2.Text = "Hospital San Vicente de Paul";
             // 
@@ -1050,18 +1143,20 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(411, 130);
+            this.label3.Location = new System.Drawing.Point(548, 160);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(454, 25);
+            this.label3.Size = new System.Drawing.Size(571, 31);
             this.label3.TabIndex = 3;
             this.label3.Text = "Gestion Administrativa - Unidad de Transporte";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(53, 51);
+            this.pictureBox1.Location = new System.Drawing.Point(71, 63);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(249, 86);
+            this.pictureBox1.Size = new System.Drawing.Size(332, 106);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -1069,9 +1164,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(967, 83);
+            this.pictureBox2.Location = new System.Drawing.Point(1289, 102);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(169, 92);
+            this.pictureBox2.Size = new System.Drawing.Size(225, 113);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
@@ -1079,18 +1175,18 @@
             // cbo_diagnostico
             // 
             this.cbo_diagnostico.FormattingEnabled = true;
-            this.cbo_diagnostico.Location = new System.Drawing.Point(139, 11);
-            this.cbo_diagnostico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbo_diagnostico.Location = new System.Drawing.Point(185, 14);
+            this.cbo_diagnostico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbo_diagnostico.Name = "cbo_diagnostico";
-            this.cbo_diagnostico.Size = new System.Drawing.Size(92, 21);
+            this.cbo_diagnostico.Size = new System.Drawing.Size(121, 24);
             this.cbo_diagnostico.TabIndex = 6;
             this.cbo_diagnostico.Visible = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 609);
+            this.ClientSize = new System.Drawing.Size(1623, 897);
             this.Controls.Add(this.cbo_diagnostico);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -1099,10 +1195,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Orden de movilización";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
