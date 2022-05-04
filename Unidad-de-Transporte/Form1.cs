@@ -26,11 +26,9 @@ namespace Unidad_de_Transporte
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-            //----------------- Modificacion codigo Santiago---------------
             //----------------- Cargar el nombre del Ingeniero Responsable----------
             om_firma_LServi_textBox.Text = "EDISON MONTESDEOCA";
-            //------------------ Cargar las unidades Administrativas en el comboBOx
+            //------------------ Cargar las unidades Administrativas en su comboBOx
             om_unidad_comboBox.Items.Add("CENTRO QUIRÚRGICO");
             om_unidad_comboBox.Items.Add("CENTRO OBSTÉTRICO");
             om_unidad_comboBox.Items.Add("GINECOLOGÍA");
@@ -57,7 +55,7 @@ namespace Unidad_de_Transporte
             om_unidad_comboBox.Items.Add("GERENCIA");
             om_unidad_comboBox.Items.Add("TALENTO HUMANO");
             om_unidad_comboBox.Items.Add("FARMACIA");
-            //------------------Cargar el servicio en el comboBOx
+            //------------------Cargar el Servicio en su comboBOx
             om_serviciocomboBox.Items.Add("CENTRO QUIRÚRGICO");
             om_serviciocomboBox.Items.Add("CENTRO OBSTÉTRICO");
             om_serviciocomboBox.Items.Add("GINECOLOGÍA");
@@ -84,8 +82,6 @@ namespace Unidad_de_Transporte
             om_serviciocomboBox.Items.Add("GERENCIA");
             om_serviciocomboBox.Items.Add("TALENTO HUMANO");
             om_serviciocomboBox.Items.Add("FARMACIA");
-
-
             //------------------ Autogenerar el numero de orden-------------
             NpgsqlCommand cmd_num_O = new NpgsqlCommand();
             cmd_num_O.CommandText = "select max(num)+1 from entrada_salida.info_solicitud;";
@@ -102,18 +98,18 @@ namespace Unidad_de_Transporte
             }
             dr_num_O.Close();
             om_num_tbox.Enabled = false;
-            //---------------- VISIBILIDAD DEL LABEL Y TEXBOX CUANDO EL HOSPITAL NO ESTA EN LA BD-------
+            //---------------- Hacer visibles el label y el texbox cuando el destino no esta en la BD-------
             label39.Visible = false;
             txtBox_Hos_Desti.Visible = false;
             label38.Visible = false;
             txtBox_UnidadM.Visible = false;
-
+            //------------- Pregunta para ver si traslada o no a un Paciente----------------
             cbo_MovPaciente.Items.Add("SI");
             cbo_MovPaciente.Items.Add("NO");
-            //Visibilidad acerca del destino
+            //-------------Visibilidad acerca del destino (En caso de que no traslade a un paciente)
             label37.Visible = false;
             txBox_Destino.Visible = false;
-            //Deshabilitar los campos del paciente
+            //---------------Deshabilitar los campos de la informacion del paciente----------------
             om_ci_textBox.Enabled = false;
             om_paciente_textBox.Enabled = false;
             om_paciente_textBox.Text = "";
@@ -130,9 +126,7 @@ namespace Unidad_de_Transporte
             om_traslado_comboBox.Text = "";
             om_codDestinoTextBox.Text = "";
 
-
-
-            // Llenado de combobox con nacionalidades
+            // --------------------Llenado de combobox con nacionalidades
             NpgsqlCommand cmd = new NpgsqlCommand();
             cmd.CommandText = "select GENTILICIO_NAC from entrada_salida.nacionalidad ORDER BY GENTILICIO_NAC ASC;";
             cmd.Connection = main.cn;
@@ -143,27 +137,23 @@ namespace Unidad_de_Transporte
             }
             nac.Close();
 
-            // Llenado de combobox de destinos a trasladar
-            //NpgsqlCommand cmd_tras = new NpgsqlCommand();
+            // ------------------------Llenado de combobox de destinos a trasladar
             cmd.CommandText = "select nombre from entrada_salida.destino order by nombre ASC;";
-            //cmd_tras.Connection = main.cn;
             NpgsqlDataReader tras = cmd.ExecuteReader();
             while (tras.Read())
             {
                 om_traslado_comboBox.Items.Add(tras[0]);
             }
             tras.Close();
-            //------ Agregar otra opcion----
+            //-------------- Agregar la opcion de "OTRO" cuando no esta el destino en la lista----
             om_traslado_comboBox.Items.Add("OTRO");
 
-            // Llenado de combobox de estado de solicitud
+            //--------------- Llenado de combobox de estado de solicitud
             est_solicitudComboBox.Items.Add("APROBADA");
             est_solicitudComboBox.Items.Add("NEGADA");
 
-            // Llenado de combobox de nombres de conductores
-            //NpgsqlCommand cmd_conduct = new NpgsqlCommand();
+            // --------------- Llenado de combobox de nombres de conductores
             cmd.CommandText = "select nombre from entrada_salida.conductor order by nombre asc;";
-            //cmd_conduct.Connection = main.cn;
             NpgsqlDataReader conduct = cmd.ExecuteReader();
             while (conduct.Read())
             {
@@ -171,10 +161,8 @@ namespace Unidad_de_Transporte
             }
             conduct.Close();
 
-            // Llenado de combobox de número de vehiculos
-            //NpgsqlCommand cmd_numVehi = new NpgsqlCommand();
+            // --------------- Llenado de combobox de número de vehiculos
             cmd.CommandText = "select num from entrada_salida.vehiculo;";
-            //cmd_numVehi.Connection = main.cn;
             NpgsqlDataReader numVehi = cmd.ExecuteReader();
             while (numVehi.Read())
             {
@@ -182,25 +170,17 @@ namespace Unidad_de_Transporte
             }
             numVehi.Close();
 
-
-
-
-
-            // Cargar combobox de cie y generar
-
+            // --------------- Cargar combobox de cie y generar
             om_cie_comboBox.Items.AddRange(cie10.cie);
             cbo_diagnostico.Items.AddRange(cie10.cie_description);
-            //AutoCompleteStringCollection datacie10 = new AutoCompleteStringCollection();
-            //datacie10.AddRange(cie);
             om_cie_comboBox.AutoCompleteCustomSource.AddRange(cie10.cie);
             om_cie_comboBox.AutoCompleteMode = AutoCompleteMode.Suggest;
             om_cie_comboBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
         }
 
-
         private void est_vehiNumComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Cargar placa de vehiculo en textbox cuando se selecciona un número
+            // --------- Cargar placa de vehiculo en textbox cuando se selecciona un número
             string stringSQL = "select placa::text from entrada_salida.vehiculo where num = " + est_vehiNumComboBox.Text;
             NpgsqlCommand cmd_placaVehi = new NpgsqlCommand();
             cmd_placaVehi.CommandText = stringSQL;
@@ -228,9 +208,136 @@ namespace Unidad_de_Transporte
             est_codVehiTextBox.Text = codVehi[0].ToString();
             codVehi.Close();
         }
+        // Cargar el código en texbox del destino seleccionado
+        private void om_traslado_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //  Cuando el destino si esta la BD
+            if (om_traslado_comboBox.Text != "OTRO")
+            {
+                NpgsqlCommand cmd_ccodtras = new NpgsqlCommand();
+                cmd_ccodtras.CommandText = "select cod_des from entrada_salida.destino where nombre = " + "'" + om_traslado_comboBox.Text + "';";
+                cmd_ccodtras.Connection = main.cn;
+                NpgsqlDataReader ccodtras = cmd_ccodtras.ExecuteReader();
+                ccodtras.Read();
+                om_codDestinoTextBox.Text = ccodtras[0].ToString();
+                ccodtras.Close();
+                //  No hacemos visible los campos que son necesario cuando el destino no esta en la BD
+                label39.Visible = false;
+                txtBox_Hos_Desti.Visible = false;
+                label38.Visible = false;
+                txtBox_UnidadM.Visible = false;
+            }
+            //  Cuando el destino no esta en la BD
+            else
+            {
+                //  Hacemos visible los campos que son necesario cuando el destino no esta en la BD 
+                label39.Visible = true;
+                txtBox_Hos_Desti.Visible = true;
+                label38.Visible = true;
+                txtBox_UnidadM.Visible = true;
+                // El codigo de destino se coloca vacío
+                om_codDestinoTextBox.Text = "";
+            }
+        }
+        //  Cargamos la cédula de identidad en texbox acorde al conductor seleccionado
+        private void est_conductComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            NpgsqlCommand cmd_cedCondu = new NpgsqlCommand();
+            cmd_cedCondu.CommandText = "select cedula from entrada_salida.conductor where nombre = " + "'" + est_conductComboBox.Text + "';";
+            cmd_cedCondu.Connection = main.cn;
+            NpgsqlDataReader cedCondu = cmd_cedCondu.ExecuteReader();
+            cedCondu.Read();
+            est_cedConductorTextBox.Text = cedCondu[0].ToString();
+            cedCondu.Close();
+        }
+        //  Cargamos el código en texbox acorde a la nacionalidad seleccionada
+        private void om_nac_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            NpgsqlCommand cmd_codNac = new NpgsqlCommand();
+            cmd_codNac.CommandText = "select ISO_NAC from entrada_salida.nacionalidad where GENTILICIO_NAC = " + "'" + om_nac_comboBox.Text + "';";
+            cmd_codNac.Connection = main.cn;
+            NpgsqlDataReader codNac = cmd_codNac.ExecuteReader();
+            codNac.Read();
+            om_codNacTextBox.Text = codNac[0].ToString();
+            codNac.Close();
+        }
+        //  Habilitar los campos que contienen informacion del paciente cuando el numero de digitos de la cédula es 10
+        private void om_ci_textBox_TextChanged(object sender, EventArgs e)
+        {
+            if (om_ci_textBox.Text.Length == 10)
+            {
+                om_paciente_textBox.Enabled = true;
+                om_edad_textBox.Enabled = true;
+                om_nac_comboBox.Enabled = true;
+                om_serviciocomboBox.Enabled = true;
+                om_cie_comboBox.Enabled = true;
+                om_traslado_comboBox.Enabled = true;
+            }
+            else
+            {
+                om_paciente_textBox.Enabled = false;
+                om_paciente_textBox.Text = "";
+                om_edad_textBox.Enabled = false;
+                om_edad_textBox.Text = "";
+                om_nac_comboBox.Enabled = false;
+                om_nac_comboBox.Text = "";
+                om_codNacTextBox.Text = "";
+                om_serviciocomboBox.Enabled = false;
+                om_serviciocomboBox.Text = "";
+                om_cie_comboBox.Enabled = false;
+                om_cie_comboBox.Text = "";
+                om_traslado_comboBox.Enabled = false;
+                om_traslado_comboBox.Text = "";
+                om_codDestinoTextBox.Text = "";
+            }
+        }
+        // Habilitar campos del paciente acorde a la respuesta de la pregunta (Moviliza un paciente?)
+        private void cbo_MovPaciente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbo_MovPaciente.Text == "NO")
+            {
+                //  Hacer visible para ingresar el destino
+                label37.Visible = true;
+                txBox_Destino.Visible = true;
+                //  Deshabilitar los campos del paciente
+                om_ci_textBox.Enabled = false;
+                om_ci_textBox.Text = "";
+                om_paciente_textBox.Enabled = false;
+                om_paciente_textBox.Text = "";
+                om_edad_textBox.Enabled = false;
+                om_edad_textBox.Text = "";
+                om_nac_comboBox.Enabled = false;
+                om_nac_comboBox.Text = "";
+                om_codNacTextBox.Text = "";
+                om_serviciocomboBox.Enabled = false;
+                om_serviciocomboBox.Text = "";
+                om_cie_comboBox.Enabled = false;
+                om_cie_comboBox.Text = "";
+                om_diag_textBox.Text = "";
+                om_traslado_comboBox.Enabled = false;
+                om_traslado_comboBox.Text = "";
+                om_codDestinoTextBox.Text = "";
+                label39.Visible = false;
+                txtBox_Hos_Desti.Visible = false;
+                txtBox_Hos_Desti.Text = "";
+                label38.Visible = false;
+                txtBox_UnidadM.Visible = false;
+                txtBox_UnidadM.Text = "";
+            }
+            else
+            {
+                //  Ocultar los campos en donde se ingresa el destino
+                label37.Visible = false;
+                txBox_Destino.Visible = false;
+                //  Hacer visible el campo para que ingrese primero la Cédula de Identidad
+                om_ci_textBox.Enabled = true;
 
-
-
+                //  Mensaje para que se coloque primero la Cédula de Identidad
+                MessageBox.Show("En la sección 2 por favor primero ingrese el número de cédula",
+                                "Sección 2", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        // Restricciones para que en los TexBox vaya solo letras o numero acorde a lo solicitado
         private void om_solicitantetextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != ' '))
@@ -262,10 +369,68 @@ namespace Unidad_de_Transporte
             if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != ' '))
             { e.Handled = true; return; }
         }
+        private void txBox_Destino_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != ' '))
+            { e.Handled = true; return; }
+        }
+        // Restriccion para que no pueda escribie en los TexBox
+        private void om_firma_solicitante_textBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+        private void om_firma_LServi_textBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+        private void est_firma_TextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+        // Restruciones para que no se pueda escribir en los ComboBox
+        private void om_nac_comboBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+        private void om_traslado_comboBox_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+        private void est_solicitudComboBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+        private void est_vehiNumComboBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+        private void om_unidad_comboBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+        private void om_serviciocomboBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+        private void cbo_MovPaciente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+        private void om_cie_comboBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar >= 'a' && e.KeyChar <= 'z')
+                e.KeyChar = Convert.ToChar(e.KeyChar.ToString().ToUpper());
+        }
+        private void om_cie_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbo_diagnostico.SelectedIndex = om_cie_comboBox.SelectedIndex;
+            om_diag_textBox.Text = cbo_diagnostico.Text;
+        }
 
+        //  Cuando se escoge el estado de la solicitud
         private void est_solicitudComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // habilitar controles requeridos solo si la solicitud es aprobada o caso contrario dejarlos vacíos
+            // Habilitar controles requeridos solo si la solicitud es Aprobada
             if (est_solicitudComboBox.Text == "APROBADA")
             {
                 est_firma_TextBox.Text = "EDISON MONTESDEOCA";
@@ -275,6 +440,7 @@ namespace Unidad_de_Transporte
                 est_obsTextBox.Enabled = true;
                 est_gruardarBtn.Enabled = true;
             }
+            // Habilitar controles requeridos solo si la solicitud es Negativa
             else
             {
                 est_firma_TextBox.Text = "EDISON MONTESDEOCA";
@@ -293,37 +459,7 @@ namespace Unidad_de_Transporte
                 est_gruardarBtn.Enabled = true;
             }
         }
-        //-----------Condiciones para que no se pueda escribir en los comboxs
-        private void om_nac_comboBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
-
-        private void om_traslado_comboBox_KeyPress_1(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
-
-        private void est_solicitudComboBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
-
-        private void est_vehiNumComboBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
-
-        private void om_unidad_comboBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
-
-        private void om_serviciocomboBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
-        //---------------------Guardar los Datos en la bases de datos respectivas-----------------
+        //  Guardar los datos en las tablas respectivas en la base de datos.
         private void est_gruardarBtn_Click(object sender, EventArgs e)
         {
             String str1;
@@ -343,13 +479,13 @@ namespace Unidad_de_Transporte
             }
             else
             {
-                //LLENAMOS EL N ORDER, FECHA, SOLICITANTE, UNIDAD ADMINISTRATIVA Y MOTIVO
+                //  LLENAMOS EL N ORDER, FECHA, SOLICITANTE, UNIDAD ADMINISTRATIVA Y MOTIVO
                 str1 = str1 + om_num_tbox.Text + ", ";
                 str1 = str1 + "'" + om_datePicker.Text + "'" + ", ";
                 str1 = str1 + "'" + om_solicitantetextBox.Text + "'" + ", ";
                 str1 = str1 + "'" + om_unidad_comboBox.Text + "'" + ", ";
                 str1 = str1 + "'" + om_motivo_textBox.Text + "'" + ", ";
-                //LLENAMOS LA TABLA QUE CONTIENE EL CARGO DE SOLICITANTE
+                //  LLENAMOS LA TABLA QUE CONTIENE EL CARGO DE SOLICITANTE
                 str3 = str3 + om_num_tbox.Text + ", ";
                 str3 = str3 + "'" + om_solicitantetextBox.Text + "'" + ", ";
                 str3 = str3 + "'" + om_cargo_textBox.Text + "');";
@@ -363,11 +499,11 @@ namespace Unidad_de_Transporte
                     }
                     else
                     {
-                        //LLENAMOS LA TABLA DE SOLICITANTE SIN DESTINO
+                        //  LLENAMOS LA TABLA DE SOLICITANTE SIN DESTINO
                         str4 = str4 + om_num_tbox.Text + ", ";
                         str4 = str4 + "'" + om_solicitantetextBox.Text + "'" + ", ";
                         str4 = str4 + "'" + txBox_Destino.Text + "'" + ");";
-                        //LLENAMOS LA TABLA DE ORDEN MOV
+                        //  LLENAMOS LA TABLA DE ORDEN MOV
                         str1 = str1 + "null" + ", ";
                         str1 = str1 + "null" + ", ";
                         str1 = str1 + "null" + ", ";
@@ -382,7 +518,7 @@ namespace Unidad_de_Transporte
                         str1 = str1 + "'" + om_horaLlegadaBase.Text + "'" + ", ";
                         str1 = str1 + "'" + om_fechaEntrada.Text + "'" + ");";
 
-                        //LLENAMOS TABLA INFO_SOLICITUD
+                        //  LLENAMOS TABLA INFO_SOLICITUD
                         if (est_solicitudComboBox.Text == "NEGADA")
                         {
                             str2 = str2 + om_num_tbox.Text + ", ";
@@ -433,7 +569,7 @@ namespace Unidad_de_Transporte
                             }
 
                         }
-                        //SOLICITUD APROVADA
+                        //  SOLICITUD APROVADA
                         else
                         {
                             if (est_vehiNumComboBox.Text == "" || est_conductComboBox.Text == "")
@@ -443,7 +579,7 @@ namespace Unidad_de_Transporte
                             }
                             else
                             {
-                                //LLENAMOS TABLA INFO SOLICITUD
+                                //  LLENAMOS TABLA INFO SOLICITUD
                                 str2 = str2 + om_num_tbox.Text + ", ";
                                 str2 = str2 + "'" + est_solicitudComboBox.Text + "'" + ", ";
                                 str2 = str2 + est_codVehiTextBox.Text + ", ";
@@ -490,10 +626,8 @@ namespace Unidad_de_Transporte
                             }
                         }
                     }
-
-
                 }
-                //CUANDO SI MOVILIZA A UN PACIENTE
+                //  CUANDO SI MOVILIZA A UN PACIENTE
                 else
                 {
                     if (om_traslado_comboBox.Text != "OTRO")
@@ -508,7 +642,7 @@ namespace Unidad_de_Transporte
                         }
                         else
                         {
-                            //LLENANDO LA TABLA DE ORDEN MOV
+                            //  LLENANDO LA TABLA DE ORDEN MOV
                             str1 = str1 + "'" + om_paciente_textBox.Text + "'" + ", ";
                             str1 = str1 + om_edad_textBox.Text + ", ";
                             str1 = str1 + "'" + om_codNacTextBox.Text + "'" + ", ";
@@ -523,10 +657,10 @@ namespace Unidad_de_Transporte
                             str1 = str1 + "'" + om_horaLlegadaDestino.Text + "'" + ", ";
                             str1 = str1 + "'" + om_horaLlegadaBase.Text + "'" + ", ";
                             str1 = str1 + "'" + om_fechaEntrada.Text + "'" + ");";
-                            //SOLICITUD NEGADA
+                            //  SOLICITUD NEGADA
                             if (est_solicitudComboBox.Text == "NEGADA")
                             {
-                                //LLENANDO TABLA DE INFO_SOLICITUD
+                                //  LLENANDO TABLA DE INFO_SOLICITUD
                                 str2 = str2 + om_num_tbox.Text + ", ";
                                 str2 = str2 + "'" + est_solicitudComboBox.Text + "'" + ", ";
                                 str2 = str2 + "null" + ", ";
@@ -620,10 +754,8 @@ namespace Unidad_de_Transporte
                                 }
                             }
                         }
-
-
                     }
-                    //EL DESTINO NO ESTA EN LA BASE DE DATOS
+                    //  EL DESTINO NO ESTA EN LA BASE DE DATOS
                     else
                     {
                         if (txtBox_UnidadM.Text == "" || txtBox_Hos_Desti.Text == "")
@@ -633,12 +765,12 @@ namespace Unidad_de_Transporte
                         }
                         else
                         {
-                            //LENANDO LA TABLA DE DESTINOS NO EN LA BD
+                            //  LENANDO LA TABLA DE DESTINOS QUE NO ESTAN EN LA BD
                             str5 = str5 + om_num_tbox.Text + ", ";
                             str5 = str5 + "'" + om_solicitantetextBox.Text + "'" + ", ";
                             str5 = str5 + "'" + txtBox_UnidadM.Text + "'" + ", ";
                             str5 = str5 + "'" + txtBox_Hos_Desti.Text + "'" + ");";
-                            //LLENANDO LA TABLA DE ORDEN MOV
+                            //  LLENANDO LA TABLA DE ORDEN MOV
                             str1 = str1 + "'" + om_paciente_textBox.Text + "'" + ", ";
                             str1 = str1 + om_edad_textBox.Text + ", ";
                             str1 = str1 + "'" + om_codNacTextBox.Text + "'" + ", ";
@@ -653,10 +785,10 @@ namespace Unidad_de_Transporte
                             str1 = str1 + "'" + om_horaLlegadaDestino.Text + "'" + ", ";
                             str1 = str1 + "'" + om_horaLlegadaBase.Text + "'" + ", ";
                             str1 = str1 + "'" + om_fechaEntrada.Text + "'" + ");";
-                            //SOLICITUD NEGADA
+                            // SOLICITUD NEGADA
                             if (est_solicitudComboBox.Text == "NEGADA")
                             {
-                                //LLENANDO TABLA ORDEN MOV
+                                // LLENANDO TABLA ORDEN MOV
                                 str2 = str2 + om_num_tbox.Text + ", ";
                                 str2 = str2 + "'" + est_solicitudComboBox.Text + "'" + ", ";
                                 str2 = str2 + "null" + ", ";
@@ -764,177 +896,11 @@ namespace Unidad_de_Transporte
                 }
             }
         }
-
-        private void om_cie_comboBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar >= 'a' && e.KeyChar <= 'z')
-                e.KeyChar = Convert.ToChar(e.KeyChar.ToString().ToUpper());
-        }
-
-        private void om_cie_comboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            cbo_diagnostico.SelectedIndex = om_cie_comboBox.SelectedIndex;
-            om_diag_textBox.Text = cbo_diagnostico.Text;
-        }
-
-        private void om_traslado_comboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (om_traslado_comboBox.Text != "OTRO")
-            {
-                NpgsqlCommand cmd_ccodtras = new NpgsqlCommand();
-                cmd_ccodtras.CommandText = "select cod_des from entrada_salida.destino where nombre = " + "'" + om_traslado_comboBox.Text + "';";
-                cmd_ccodtras.Connection = main.cn;
-                NpgsqlDataReader ccodtras = cmd_ccodtras.ExecuteReader();
-                ccodtras.Read();
-                om_codDestinoTextBox.Text = ccodtras[0].ToString();
-                ccodtras.Close();
-                //Visibilidad
-                label39.Visible = false;
-                txtBox_Hos_Desti.Visible = false;
-                label38.Visible = false;
-                txtBox_UnidadM.Visible = false;
-
-            }
-            else
-            {
-                label39.Visible = true;
-                txtBox_Hos_Desti.Visible = true;
-                label38.Visible = true;
-                txtBox_UnidadM.Visible = true;
-                om_codDestinoTextBox.Text = "";
-
-            }
-
-        }
-
-        private void est_conductComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            NpgsqlCommand cmd_cedCondu = new NpgsqlCommand();
-            cmd_cedCondu.CommandText = "select cedula from entrada_salida.conductor where nombre = " + "'" + est_conductComboBox.Text + "';";
-            cmd_cedCondu.Connection = main.cn;
-            NpgsqlDataReader cedCondu = cmd_cedCondu.ExecuteReader();
-            cedCondu.Read();
-            est_cedConductorTextBox.Text = cedCondu[0].ToString();
-            cedCondu.Close();
-        }
-
-        private void om_nac_comboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            NpgsqlCommand cmd_codNac = new NpgsqlCommand();
-            cmd_codNac.CommandText = "select ISO_NAC from entrada_salida.nacionalidad where GENTILICIO_NAC = " + "'" + om_nac_comboBox.Text + "';";
-            cmd_codNac.Connection = main.cn;
-            NpgsqlDataReader codNac = cmd_codNac.ExecuteReader();
-            codNac.Read();
-            om_codNacTextBox.Text = codNac[0].ToString();
-            codNac.Close();
-        }
-        private void om_ci_textBox_TextChanged(object sender, EventArgs e)
-        {
-            if (om_ci_textBox.Text.Length == 10)
-            {
-                om_paciente_textBox.Enabled = true;
-                om_edad_textBox.Enabled = true;
-                om_nac_comboBox.Enabled = true;
-                om_serviciocomboBox.Enabled = true;
-                om_cie_comboBox.Enabled = true;
-                om_traslado_comboBox.Enabled = true;
-            }
-            else
-            {
-                om_paciente_textBox.Enabled = false;
-                om_paciente_textBox.Text = "";
-                om_edad_textBox.Enabled = false;
-                om_edad_textBox.Text = "";
-                om_nac_comboBox.Enabled = false;
-                om_nac_comboBox.Text = "";
-                om_codNacTextBox.Text = "";
-                om_serviciocomboBox.Enabled = false;
-                om_serviciocomboBox.Text = "";
-                om_cie_comboBox.Enabled = false;
-                om_cie_comboBox.Text = "";
-                om_traslado_comboBox.Enabled = false;
-                om_traslado_comboBox.Text = "";
-                om_codDestinoTextBox.Text = "";
-            }
-        }
-        // --------------------------   Modificacion Destino by Santiago ------------------------- 
-        private void cbo_MovPaciente_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbo_MovPaciente.Text == "NO")
-            {
-                //hacer visible para ingresar el destino
-                label37.Visible = true;
-                txBox_Destino.Visible = true;
-                //Deshabilitar los campos del paciente
-                om_ci_textBox.Enabled = false;
-                om_ci_textBox.Text = "";
-                om_paciente_textBox.Enabled = false;
-                om_paciente_textBox.Text = "";
-                om_edad_textBox.Enabled = false;
-                om_edad_textBox.Text = "";
-                om_nac_comboBox.Enabled = false;
-                om_nac_comboBox.Text = "";
-                om_codNacTextBox.Text = "";
-                om_serviciocomboBox.Enabled = false;
-                om_serviciocomboBox.Text = "";
-                om_cie_comboBox.Enabled = false;
-                om_cie_comboBox.Text = "";
-                om_diag_textBox.Text = "";
-                om_traslado_comboBox.Enabled = false;
-                om_traslado_comboBox.Text = "";
-                om_codDestinoTextBox.Text = "";
-                label39.Visible = false;
-                txtBox_Hos_Desti.Visible = false;
-                txtBox_Hos_Desti.Text = "";
-                label38.Visible = false;
-                txtBox_UnidadM.Visible = false;
-                txtBox_UnidadM.Text = "";
-
-            }
-            else
-            {
-                label37.Visible = false;
-                txBox_Destino.Visible = false;
-                om_ci_textBox.Enabled = true;
-
-                //Mensaje para que se coloque primero la CI
-                MessageBox.Show("En la sección 2 por favor primero ingrese el número de cédula",
-                                "Sección 2", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-
-            }
-        }
-        //Propiedad para que no se pueda escribir en los combobox y en las cajas de texto
-        private void cbo_MovPaciente_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
-
-        private void txBox_Destino_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != ' '))
-            { e.Handled = true; return; }
-        }
-        //LLENAR EL NOMBRE DEL SOLICITANTE COMO FIRMA
+        // Llendo del nombre del solicitante como firma
         private void om_solicitantetextBox_TextChanged(object sender, EventArgs e)
         {
             om_firma_solicitante_textBox.Text = om_solicitantetextBox.Text.ToString();
         }
-        //--------- Condiciones para no poder escribir en las cajas de texto
-        private void om_firma_solicitante_textBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
-
-        private void om_firma_LServi_textBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
-
-        private void est_firma_TextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
-        
+       
     }
 }

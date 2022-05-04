@@ -26,10 +26,10 @@ namespace Unidad_de_Transporte
             cmd.Connection = main.cn;
             NpgsqlDataReader check_info = cmd.ExecuteReader();
             check_info.Read();
+            //  Cuando no moviliza a un paciente
             if (check_info[11].ToString() == "" && check_info[5].ToString() == "")
             {
                 check_info.Close();
-                //im_actividades.Items.Clear();
                 string str2 = "select * from entrada_salida.orden_mov O inner join ";
                 str2 = str2 + "entrada_salida.info_solicitud I on O.num = I.num inner join ";
                 str2 = str2 + "entrada_salida.autorizacion A on I.num = A.num inner join ";
@@ -43,12 +43,10 @@ namespace Unidad_de_Transporte
                 NpgsqlDataReader load_info1 = cmd2.ExecuteReader();
                 while (load_info1.Read())
                 {
-                    //-------------Modificacion Codigo Santy-----------
                     // Datos Hoja de Ruta
                     hr_lugar.Text = "IBARRA";
                     hr_num.Text = load_info1[0].ToString();
                     hr_datePicker.Text = load_info1[24].ToString();
-                    //hr_datePicker.Text = load_info1[1].ToString();
                     hr_solicitante.Text = load_info1[2].ToString();
                     hr_unidad.Text = load_info1[3].ToString();
                     hr_motivo.Text = load_info1[4].ToString();
@@ -62,16 +60,12 @@ namespace Unidad_de_Transporte
                     hr_fechaSalida1.Text = load_info1[14].ToString();
                     hr_horaSalida1.Text = load_info1[12].ToString();
                     hr_kmSalida1.Text = load_info1[29].ToString();
-                    //hr_lugarLlegada1.Text = Form5.destino; //Ciudad destino
                     hr_lugarLlegada1.Text = load_info1[57].ToString(); //Ciudad destino
                     hr_fechaLlegada1.Text = load_info1[17].ToString();
                     hr_horaLlegada1.Text = load_info1[15].ToString();
-                    //hr_kmLlegada1.Text = "";
-                    //hr_lugarSalida2.Text = Form5.destino; //Ciudad destino
                     hr_lugarSalida2.Text = load_info1[57].ToString(); //Ciudad destino
                     hr_fechaSalida2.Text = load_info1[14].ToString();
                     hr_horaSalida2.Text = load_info1[13].ToString();
-                    //hr_kmSalida2.Text = "";
                     hr_lugarLlegada2.Text = "IBARRA (BASE)";
                     hr_fechaLlegada2.Text = load_info1[17].ToString();
                     hr_horaLlegada2.Text = load_info1[16].ToString();
@@ -80,10 +74,10 @@ namespace Unidad_de_Transporte
                 }
                 load_info1.Close();
             }
+            //  Cuando moviliza a un paciente pero el destino no esta en la BD
             else if (check_info[11].ToString() == "" && check_info[5].ToString() != "")
             {
                 check_info.Close();
-                //im_actividades.Items.Clear();
                 string str4 = "select * from entrada_salida.orden_mov O inner join ";
                 str4 = str4 + "entrada_salida.info_solicitud I on O.num = I.num inner join ";
                 str4 = str4 + "entrada_salida.autorizacion A on I.num = A.num inner join ";
@@ -97,7 +91,6 @@ namespace Unidad_de_Transporte
                 NpgsqlDataReader load_info3 = cmd4.ExecuteReader();
                 while (load_info3.Read())
                 {
-                    //-------------Modificacion Codigo Santy-----------
                     // Datos Hoja de Ruta
                     hr_lugar.Text = "IBARRA";
                     hr_num.Text = load_info3[0].ToString();
@@ -128,11 +121,10 @@ namespace Unidad_de_Transporte
                 }
                 load_info3.Close();
             }
+            //  Cuando moviliza un paciente y el destino esta en la base de datos
             else if (check_info[11].ToString() != "")
             {
                 check_info.Close();
-                //im_actividades.Items.Clear();
-                //---------------------Modificacion Codigo hecha por Santiago------------------
                 string str3 = "select * from entrada_salida.orden_mov O inner join ";
                 str3 = str3 + "entrada_salida.info_solicitud I on O.num=I.num inner join ";
                 str3 = str3 + "entrada_salida.autorizacion A on I.num = A.num inner join ";
@@ -147,12 +139,10 @@ namespace Unidad_de_Transporte
 
                 while (load_info2.Read())
                 {
-                    //---------------------Modificacion Codigo hecha por Santiago------------------
                     // Datos Hoja de Ruta
                     hr_lugar.Text = "IBARRA";
                     hr_num.Text = load_info2[0].ToString();
                     hr_datePicker.Text = load_info2[24].ToString();
-                    //hr_datePicker.Text = load_info2[1].ToString();
                     hr_solicitante.Text = load_info2[2].ToString();
                     hr_unidad.Text = load_info2[3].ToString();
                     hr_motivo.Text = load_info2[4].ToString();

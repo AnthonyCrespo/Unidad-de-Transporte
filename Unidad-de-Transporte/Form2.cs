@@ -21,6 +21,7 @@ namespace Unidad_de_Transporte
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            //  Autocompletar los números de reportes 
             aut_num_textBox.AutoCompleteCustomSource = CargarCods();
             aut_num_textBox.AutoCompleteMode = AutoCompleteMode.Suggest;
             aut_num_textBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
@@ -44,9 +45,9 @@ namespace Unidad_de_Transporte
                 codOrdenMov.Add(codOM[0].ToString());              
             }
             codOM.Close();
-
             return codOrdenMov;
         }
+        //  Llenar el codigo en el texbox acorde el motivo de movilización (Institución o Mecánico)
         private void aut_motivoComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (aut_motivoComboBox.SelectedIndex == 0)
@@ -58,7 +59,7 @@ namespace Unidad_de_Transporte
                 aut_codMotivTbox.Text = "MECANIC";
             }
         }
-
+        // Restricciones para que en los TexBox vaya solo letras o numero acorde a lo solicitado
         private void aut_num_textBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
@@ -74,23 +75,20 @@ namespace Unidad_de_Transporte
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
             { e.Handled = true; }
         }
-        private void aut_numVehiComboBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
-        private void aut_motivoComboBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
         private void aut_num_textBox_TextChanged(object sender, EventArgs e)
         {
             aut_loadBtn.Enabled = true;
         }
-
+        //  Restriccion para no escribir en los comboBox
+        private void aut_motivoComboBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+        
+        //  Autollenar los campos que se repiten del primer formulario
         private void aut_loadBtn_Click(object sender, EventArgs e)
         {
             string str1;
-            //------------Modificación código hecha por Santiago----------------
             str1 = "select * from entrada_salida.orden_mov O inner join ";
             str1 = str1 + "entrada_salida.info_solicitud I on O.num = I.num inner join ";
             str1 = str1 + "entrada_salida.vehiculo V on I.vehiculo = V.cod_inst inner join ";
@@ -100,17 +98,7 @@ namespace Unidad_de_Transporte
             str1 = str1 + "and I.estado = 'APROBADA'";
             str1 = str1 + "and NOT EXISTS( ";
             str1 = str1 + " SELECT FROM   entrada_salida.autorizacion ";
-            str1 = str1 + " WHERE  num = I.num) order by I.num asc; ";
-            //----------------Codigo original----------------------
-            //str1 = "select * from entrada_salida.orden_mov O inner join ";
-            //str1 = str1 + "entrada_salida.info_solicitud I on O.num = I.num inner join ";
-            //str1 = str1 + "entrada_salida.vehiculo V on I.vehiculo = V.cod_inst inner join ";
-            //str1 = str1 + "entrada_salida.conductor C on I.conductor = C.cedula ";
-            //str1 = str1 + "where O.num = " + aut_num_textBox.Text;
-            //str1 = str1 + "and I.estado = 'APROBADA'";
-            //str1 = str1 + "and NOT EXISTS( ";
-            //str1 = str1 + " SELECT FROM   entrada_salida.autorizacion ";
-            //str1 = str1 + " WHERE  num = I.num) order by I.num asc; "; 
+            str1 = str1 + " WHERE  num = I.num) order by I.num asc; "; 
 
             NpgsqlCommand cmd = new NpgsqlCommand();
             cmd.CommandText = str1;
@@ -125,14 +113,12 @@ namespace Unidad_de_Transporte
                 aut_numVehiTBox.Text = load_info[27].ToString();
                 aut_codConducTbox.Text = load_info[21].ToString();
                 aut_nomCondTbox.Text = load_info[39].ToString();
-                //aut_fecha.Text = load_info[1].ToString();
                 aut_solicitante.Text = load_info[2].ToString();
                 aut_Asunto.Text = load_info[4].ToString();
                 aut_solicitante_cargo.Text = load_info[46].ToString();
 
-                //---------------- Modificacion hecha por Santiago--------------------
+                //  Hacemos visibles los campos que van hacer llenados en este formulario
                 aut_fecha.Enabled = true;
-                //--------------------------------------------------------------------
                 aut_kmEntrada.Enabled = true;
                 aut_kmSalida.Enabled = true;
                 aut_motivoComboBox.Enabled = true;
@@ -155,20 +141,14 @@ namespace Unidad_de_Transporte
                 aut_motivoComboBox.Enabled = false;
                 aut_motivoComboBox.Text = "";
                 aut_guardarBtn.Enabled = false;
-                //---------------- Modificacion hecha por Santiago--------------------
                 aut_solicitante_cargo.Text = "";
-                //---------------------------------------------------------------
                 MessageBox.Show("No existe una Orden de movilización Aprobada con el número que se intenta buscar o ya hay una Autorización de Salida guardada con dicho número.",
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                load_info.Close();
-                
+                load_info.Close(); 
             }
             load_info.Close();
-
         }
-
-        
-
+        //  Guardar los datos en la tabla de la Base de Datos
         private void aut_guardarBtn_Click(object sender, EventArgs e)
         {
             if (aut_motivoComboBox.Text == "")

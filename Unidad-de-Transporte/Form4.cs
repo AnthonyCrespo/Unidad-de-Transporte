@@ -27,12 +27,13 @@ namespace Unidad_de_Transporte
             burcarPorCBox.Items.Add("VEHÍCULO");
             burcarPorCBox.Items.Add("FECHA");
             burcarPorCBox.Items.Add("CONDUCTOR");
-            //burcarPorCBox.Items.Add("DESTINO");
-
+            
+            //  AutoCompletar el número de solicitud
             writeNumTBox.AutoCompleteCustomSource = CargarCods();
             writeNumTBox.AutoCompleteMode = AutoCompleteMode.Suggest;
             writeNumTBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
 
+            //  Diseñar el datagirdview
             resultsDataGrid.ColumnCount = 5;
             resultsDataGrid.Columns[0].HeaderText = "Número de Orden";
             resultsDataGrid.Columns[1].HeaderText = "Fecha";
@@ -51,9 +52,6 @@ namespace Unidad_de_Transporte
                 selectVehiCbox.Items.Add(numVehi[0]);
             }
             numVehi.Close();
-
-
-
 
             // Llenado de combobox de nombres de conductores
             NpgsqlCommand cmd_conduct = new NpgsqlCommand();
@@ -83,13 +81,11 @@ namespace Unidad_de_Transporte
             while (codOM.Read())
             {
                 codOrdenMov.Add(codOM[0].ToString());
-                //om_cie_comboBox.Items.Add(codOM[0].ToString());
             }
             codOM.Close();
-
             return codOrdenMov;
         }
-
+        //  Hacer visible los campos acorde el método de busqueda
         private void burcarPorCBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (burcarPorCBox.SelectedIndex == 0)
@@ -160,25 +156,8 @@ namespace Unidad_de_Transporte
                 buscarConducBtn.Enabled = false;
                 buscarConducBtn.Visible = false;
             }
-            //if (burcarPorCBox.SelectedIndex == 4)
-            //{
-            //    selectDestCBox.Enabled = true;
-            //    selectDestCBox.Visible = true;
-            //    destlabel.Visible = true;
-            //    buscarDestBtn.Enabled = true;
-            //    buscarDestBtn.Visible = true;
-
-            //}
-            //else
-            //{
-            //    selectDestCBox.Enabled = false;
-            //    selectDestCBox.Visible = false;
-            //    destlabel.Visible = false;
-            //    buscarDestBtn.Enabled = false;
-            //    buscarDestBtn.Visible = false;
-            //}
         }
-
+        // Restricciones para que en los TexBox vaya solo letras o numero acorde a lo solicitado
         private void writeNumTBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
@@ -187,13 +166,48 @@ namespace Unidad_de_Transporte
                 e.Handled = true;
             }
         }
-
+        // Cargar codigo institucional de vehiculo en textbox cuando se selecciona un número
+        private void selectVehiCbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                NpgsqlCommand cmd_codVehi = new NpgsqlCommand();
+                cmd_codVehi.CommandText = "select cod_inst from entrada_salida.vehiculo where num = " + selectVehiCbox.Text;
+                cmd_codVehi.Connection = main.cn;
+                NpgsqlDataReader codVehi = cmd_codVehi.ExecuteReader();
+                codVehi.Read();
+                codVehiTBox.Text = codVehi[0].ToString();
+                codVehi.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        // Cargar cédula del conductor en textbox cuando se selecciona un nombre
+        private void selectConducCBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                NpgsqlCommand cmd_cedCondu = new NpgsqlCommand();
+                cmd_cedCondu.CommandText = "select cedula from entrada_salida.conductor where nombre = " + "'" + selectConducCBox.Text + "';";
+                cmd_cedCondu.Connection = main.cn;
+                NpgsqlDataReader cedCondu = cmd_cedCondu.ExecuteReader();
+                cedCondu.Read();
+                cedConductorTBox.Text = cedCondu[0].ToString();
+                cedCondu.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        //  Generar los resultados en la datagirdview (Numero de Orden)
         private void buscarNumBtn_Click(object sender, EventArgs e)
         {
             try
             {
                 string str1;
-                //---------------------Modificacion Codigo hecha por Santiago------------------ 
                 str1 = "select O.num, I.fecha, O.solicitante, C.nombre as conductor, V.num ";
                 str1 = str1 + "from entrada_salida.orden_mov O inner join ";
                 str1 = str1 + "entrada_salida.info_solicitud I on O.num = I.num inner join ";
@@ -201,29 +215,20 @@ namespace Unidad_de_Transporte
                 str1 = str1 + "entrada_salida.vehiculo V on I.vehiculo = V.cod_inst inner join ";
                 str1 = str1 + "entrada_salida.conductor C on I.conductor = C.cedula ";
                 str1 = str1 + "where O.num = " + writeNumTBox.Text;
-                
-                //--------------------Codigo original--------------
-                //str1 = "select O.num, O.fecha, O.solicitante, C.nombre as conductor, V.num ";
-                //str1 = str1 + "from entrada_salida.orden_mov O natural join ";
-                //str1 = str1 + "entrada_salida.info_solicitud I inner join ";
-                //str1 = str1 + "entrada_salida.autorizacion A on I.num = A.num inner join ";
-                //str1 = str1 + "entrada_salida.vehiculo V on I.vehiculo = V.cod_inst inner join ";
-                //str1 = str1 + "entrada_salida.conductor C on I.conductor = C.cedula ";
-                //str1 = str1 + "where O.num = " + writeNumTBox.Text;
 
                 NpgsqlCommand cmd = new NpgsqlCommand();
                 cmd.CommandText = str1;
                 cmd.Connection = main.cn;
                 NpgsqlDataReader load_info = cmd.ExecuteReader();
                 resultsDataGrid.Rows.Clear();
-                
+
                 load_info.Read();
                 try
                 {
                     resultsDataGrid.Rows.Add(load_info[0], load_info[1], load_info[2], load_info[3], load_info[4]);
                     load_info.Close();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show("No hay registros con el número ingresado. Revisar que haya una orden de movilización aprobada con dicho número y que tenga su correspondiente autorización de salida.",
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -239,52 +244,12 @@ namespace Unidad_de_Transporte
             resultsDataGrid.ClearSelection();
 
         }
-
-        private void selectVehiCbox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                // Cargar codigo institucional de vehiculo en textbox cuando se selecciona un número
-                NpgsqlCommand cmd_codVehi = new NpgsqlCommand();
-                cmd_codVehi.CommandText = "select cod_inst from entrada_salida.vehiculo where num = " + selectVehiCbox.Text;
-                cmd_codVehi.Connection = main.cn;
-                NpgsqlDataReader codVehi = cmd_codVehi.ExecuteReader();
-                codVehi.Read();
-                codVehiTBox.Text = codVehi[0].ToString();
-                codVehi.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void selectConducCBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                // Cargar cédula del conductor en textbox cuando se selecciona un nombre
-                NpgsqlCommand cmd_cedCondu = new NpgsqlCommand();
-                cmd_cedCondu.CommandText = "select cedula from entrada_salida.conductor where nombre = " + "'" + selectConducCBox.Text + "';";
-                cmd_cedCondu.Connection = main.cn;
-                NpgsqlDataReader cedCondu = cmd_cedCondu.ExecuteReader();
-                cedCondu.Read();
-                cedConductorTBox.Text = cedCondu[0].ToString();
-                cedCondu.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
+        //  Generar los resultados en la datagirdview (Vehículo)
         private void buscarVehiBtn_Click(object sender, EventArgs e)
         {
             try
             {
                 string str1;
-
-                //---------------------Modificacion Codigo hecha por Santiago------------------
                 str1 = "select O.num, I.fecha, O.solicitante, C.nombre as conductor, V.num ";
                 str1 = str1 + "from entrada_salida.orden_mov O inner join ";
                 str1 = str1 + "entrada_salida.info_solicitud I on O.num = I.num inner join ";
@@ -292,14 +257,6 @@ namespace Unidad_de_Transporte
                 str1 = str1 + "entrada_salida.vehiculo V on I.vehiculo = V.cod_inst inner join ";
                 str1 = str1 + "entrada_salida.conductor C on I.conductor = C.cedula ";
                 str1 = str1 + "where I.vehiculo = " + codVehiTBox.Text;
-                //---------------------Codigo original--------------
-                //str1 = "select O.num, O.fecha, O.solicitante, C.nombre as conductor, V.num ";
-                //str1 = str1 + "from entrada_salida.orden_mov O natural join ";
-                //str1 = str1 + "entrada_salida.info_solicitud I inner join ";
-                //str1 = str1 + "entrada_salida.autorizacion A on I.num = A.num inner join ";
-                //str1 = str1 + "entrada_salida.vehiculo V on I.vehiculo = V.cod_inst inner join ";
-                //str1 = str1 + "entrada_salida.conductor C on I.conductor = C.cedula ";
-                //str1 = str1 + "where I.vehiculo = " + codVehiTBox.Text;
 
                 NpgsqlCommand cmd = new NpgsqlCommand();
                 cmd.CommandText = str1;
@@ -312,8 +269,6 @@ namespace Unidad_de_Transporte
                     resultsDataGrid.Rows.Add(load_info[0], load_info[1], load_info[2], load_info[3], load_info[4]);
                 }
                 load_info.Close();
-
-
             }
             catch (Exception ex)
             {
@@ -321,16 +276,13 @@ namespace Unidad_de_Transporte
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             resultsDataGrid.ClearSelection();
-
         }
-
+        //  Generar los resultados en la datagirdview (Fecha)
         private void buscarFechaBtn_Click(object sender, EventArgs e)
         {
             try
             {
                 string str1;
-
-                //---------------------Modificacion Codigo hecha por Santiago------------------
                 str1 = "select O.num, I.fecha, O.solicitante, C.nombre as conductor, V.num ";
                 str1 = str1 + "from entrada_salida.orden_mov O inner join ";
                 str1 = str1 + "entrada_salida.info_solicitud I on O.num = I.num inner join ";
@@ -339,15 +291,6 @@ namespace Unidad_de_Transporte
                 str1 = str1 + "entrada_salida.conductor C on I.conductor = C.cedula ";
                 str1 = str1 + "where I.fecha = " + "'" + pickFecha.Text + "'";
 
-                //------------------------------Codigo Original------------------
-                //str1 = "select O.num, O.fecha, O.solicitante, C.nombre as conductor, V.num ";
-                //str1 = str1 + "from entrada_salida.orden_mov O natural join ";
-                //str1 = str1 + "entrada_salida.info_solicitud I inner join ";
-                //str1 = str1 + "entrada_salida.autorizacion A on I.num = A.num inner join ";
-                //str1 = str1 + "entrada_salida.vehiculo V on I.vehiculo = V.cod_inst inner join ";
-                //str1 = str1 + "entrada_salida.conductor C on I.conductor = C.cedula ";
-                //str1 = str1 + "where O.fecha = " + "'" + pickFecha.Text +"'";
-
                 NpgsqlCommand cmd = new NpgsqlCommand();
                 cmd.CommandText = str1;
                 cmd.Connection = main.cn;
@@ -359,8 +302,6 @@ namespace Unidad_de_Transporte
                     resultsDataGrid.Rows.Add(load_info[0], load_info[1], load_info[2], load_info[3], load_info[4]);
                 }
                 load_info.Close();
-
-
             }
             catch (Exception ex)
             {
@@ -369,13 +310,12 @@ namespace Unidad_de_Transporte
             }
             resultsDataGrid.ClearSelection();
         }
-
+        //  Generar los resultados en la datagirdview (Conductor)
         private void buscarConducBtn_Click(object sender, EventArgs e)
         {
             try
             {
                 string str1;
-                //---------------------Modificacion Codigo hecha por Santiago------------------
                 str1 = "select O.num, I.fecha, O.solicitante, C.nombre as conductor, V.num ";
                 str1 = str1 + "from entrada_salida.orden_mov O inner join ";
                 str1 = str1 + "entrada_salida.info_solicitud I on O.num = I.num inner join ";
@@ -384,14 +324,6 @@ namespace Unidad_de_Transporte
                 str1 = str1 + "entrada_salida.conductor C on I.conductor = C.cedula ";
                 str1 = str1 + "where I.conductor = " + "'" + cedConductorTBox.Text + "'";
 
-                //----------------      Codigo original---------------------------
-                //str1 = "select O.num, O.fecha, O.solicitante, C.nombre as conductor, V.num ";
-                //str1 = str1 + "from entrada_salida.orden_mov O natural join ";
-                //str1 = str1 + "entrada_salida.info_solicitud I inner join ";
-                //str1 = str1 + "entrada_salida.autorizacion A on I.num = A.num inner join ";
-                //str1 = str1 + "entrada_salida.vehiculo V on I.vehiculo = V.cod_inst inner join ";
-                //str1 = str1 + "entrada_salida.conductor C on I.conductor = C.cedula ";
-                //str1 = str1 + "where I.conductor = " + "'" + cedConductorTBox.Text + "'";
                 NpgsqlCommand cmd = new NpgsqlCommand();
                 cmd.CommandText = str1;
                 cmd.Connection = main.cn;
@@ -411,12 +343,11 @@ namespace Unidad_de_Transporte
             }
             resultsDataGrid.ClearSelection();
         }
-
         private void resultsDataGrid_SelectionChanged(object sender, EventArgs e)
         {
             
         }
-        
+        //  Cargar el número de orden en una variable pública
         private void resultsDataGrid_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in resultsDataGrid.SelectedRows)
@@ -425,7 +356,7 @@ namespace Unidad_de_Transporte
                 Form5.numero_orden = num_O.ToString();
             }
         }
-
+        //  Abrir el formulario de Información de Movilización
         private void InfMovBtn_Click(object sender, EventArgs e)
         {
             try
@@ -454,7 +385,6 @@ namespace Unidad_de_Transporte
                         Form7 frm = new Form7();
                         frm.Show();
                     }
-                    //---------------Abrir formulariooooooooooooo*----
                 }
             }
             catch (Exception ex)
@@ -463,7 +393,7 @@ namespace Unidad_de_Transporte
                 "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        //  Abrir el formulario de Hoja de Ruta
         private void HojaRuBtn_Click(object sender, EventArgs e)
         {
             try
@@ -492,7 +422,6 @@ namespace Unidad_de_Transporte
                         Form6 frm = new Form6();
                         frm.Show();
                     }
-                    //---------------Abrir formulariooooooooooooo*----
                 }
             }
             catch (Exception ex)

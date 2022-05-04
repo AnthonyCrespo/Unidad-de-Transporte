@@ -26,6 +26,7 @@ namespace Unidad_de_Transporte
             cmd.Connection = main.cn;
             NpgsqlDataReader check_info = cmd.ExecuteReader();
             check_info.Read();
+            //  Cuando no moviliza a un paciente 
             if (check_info[11].ToString() == "" && check_info[5].ToString() == "")
             {
                 check_info.Close();
@@ -48,7 +49,7 @@ namespace Unidad_de_Transporte
                     im_numuero.Text = load_info1[0].ToString();
                     im_solicitante.Text = load_info1[2].ToString();
                     im_paramedico.Text = load_info1[22].ToString();
-                    im_ciudad.Text = load_info1[57].ToString(); //Ojitoooo cambiaaar                                             
+                    im_ciudad.Text = load_info1[57].ToString();                                              
                     im_actividades.Items.Add(load_info1[4].ToString());
                     im_actividades.Items.Add(load_info1[10].ToString());
                     im_fechaSalida.Text = load_info1[14].ToString();
@@ -66,6 +67,7 @@ namespace Unidad_de_Transporte
                 }
                 load_info1.Close();
             }
+            //  Cuando moviliza a un paciente pero el destino no esta en la BD
             else if (check_info[11].ToString() == "" && check_info[5].ToString() != "")
             {
                 check_info.Close();
@@ -105,11 +107,11 @@ namespace Unidad_de_Transporte
                 }
                 load_info3.Close();
             }
+            //  Cuando moviliza un paciente
             else if (check_info[11].ToString() != "")
             {
                 check_info.Close();
                 im_actividades.Items.Clear();
-                //---------------------Modificacion Codigo hecha por Santiago------------------
                 string str3 = "select * from entrada_salida.orden_mov O inner join ";
                 str3 = str3 + "entrada_salida.info_solicitud I on O.num=I.num inner join ";
                 str3 = str3 + "entrada_salida.autorizacion A on I.num = A.num inner join ";
