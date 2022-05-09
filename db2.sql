@@ -1,5 +1,4 @@
 create schema entrada_salida;
-
 CREATE TYPE clas_vehi AS
 ENUM('Ambulancia', 'Camioneta');
 CREATE TYPE estad_vehi AS
@@ -29,18 +28,6 @@ insert into entrada_salida.vehiculo values
 (6542193, 'Ambulancia', default, 'BLANCO',           'KIA', 'IEA-0320',   'AMBULANCIA',                          'PREGIO', '8LTOTS73229E002172',          'JT576818', 2008, 'B'),
 (6542192,  'Camioneta', default, 'BLANCO',     'CHEVROLET', 'IEA-0391', 'DOBLE CABINA',           'LUV D-MAX C/D 4X2 T/M',  '8LBETF3DX90000552',     'C24SE31028824', 2009, 'B'),
 (6542194, 'Ambulancia', default, 'BLANCO',         'MAZDA', 'IEA-1326',   'AMBULANCIA',       'BT-50 CS 4X2 STD TD 2,5FL',  'MM7UNY0W490829846',        'WLTA145654', 2009, 'B');
-
-/* create table entrada_salida.cie10(
-	code varchar primary key,
-	code_0 varchar,
-	code_1 varchar,
-	code_2 varchar,
-	code_3 varchar,
-	code_4 varchar,
-	description varchar,
-	level int,
-	source varchar
-); */
 
 
 CREATE TYPE tip_licen AS
@@ -104,17 +91,6 @@ insert into entrada_salida.destino values
 (default,     'CENTRO DE SALUD CARANQUI',  'MSP',    'IBARRA',  10);
 
 
-
-
-
-
-
-
-
---------------------------------------------------------------
---------------------------------------------------------------
---------------------------------------------------------------
-
 -------- TABLA CON DESTINO QUE NO ESTA EN LA BD----
 create table entrada_salida.destino_no_bd(
 	num_sol int primary key,
@@ -128,17 +104,12 @@ create table entrada_salida.solicitante_cargo(
 	nombre_solicitante varchar not null,
 	cargo_solicitante varchar not null
 );
--- TABLA CUANDO NO HAY UN DESTINO-----
+---- TABLA CUANDO NO HAY UN DESTINO-----
 create table entrada_salida.solicitante_sin_destino(
 	numero int primary key,
 	solicitante varchar not null,
 	destino varchar not null
 );
-
---------------------------------------------------------------
---------------------------------------------------------------
---------------------------------------------------------------
-
 
 create table entrada_salida.nacionalidad(
 	PAIS_NAC varchar, 
@@ -347,10 +318,6 @@ INSERT INTO entrada_salida.nacionalidad(PAIS_NAC, GENTILICIO_NAC, ISO_NAC ) VALU
 INSERT INTO entrada_salida.nacionalidad(PAIS_NAC, GENTILICIO_NAC, ISO_NAC ) VALUES('Zambia','ZAMBIANA','ZMB');
 INSERT INTO entrada_salida.nacionalidad(PAIS_NAC, GENTILICIO_NAC, ISO_NAC ) VALUES('Zimbabue','ZIMBABUENSE','ZWE');
 
---------------------------------------------------------------
---------------------------------------------------------------
---------------------------------------------------------------
-
 
 create table entrada_salida.orden_mov(
 	num int primary key,
@@ -375,7 +342,6 @@ create table entrada_salida.orden_mov(
 	fecha_entrada date
 );
 alter table entrada_salida.orden_mov add constraint fk_nacion  FOREIGN KEY (nacionalidad)  REFERENCES entrada_salida.nacionalidad (ISO_NAC);
---alter table entrada_salida.orden_mov add constraint fk_cie10   FOREIGN KEY (cie10)         REFERENCES entrada_salida.cie10 (code);
 alter table entrada_salida.orden_mov add constraint fk_destino FOREIGN KEY (destino)       REFERENCES entrada_salida.destino (cod_des);
 
 CREATE TYPE est_sol AS
