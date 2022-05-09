@@ -41,6 +41,7 @@ El directorio Transporte Documentos contiene:
 **NOTA1** 
 
 Las tablas limpieza, cabina_exterior, cabina_interior, documentos heredan la estructura de la tabla preguntas.
+
 **NOTA2**
 La tabla destino_no_bd fue creada ya que que existen destinos de traslados que no estan registrados en la BD (tabla destino) por lo que se creo esta nueva tabla para poder guardar los nuevos destinos. Por otra parte, la tabla solicitante_sin_destino fue creada ya que puede existir la posiblidad de que la movilización no incluya a un paciente por lo que se necesita conocer el destino de movilización. Dicho destino es guarado en la tabla en mención.
 
