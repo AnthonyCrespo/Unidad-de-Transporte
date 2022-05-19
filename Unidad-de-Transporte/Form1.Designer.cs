@@ -140,7 +140,7 @@
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.ItemSize = new System.Drawing.Size(76, 22);
             this.tabControl1.Location = new System.Drawing.Point(15, 194);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1599, 677);
@@ -161,9 +161,9 @@
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 26);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage1.Size = new System.Drawing.Size(1591, 647);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Formulario";
@@ -172,7 +172,7 @@
             // 
             this.txtBox_Hos_Desti.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBox_Hos_Desti.Location = new System.Drawing.Point(683, 575);
-            this.txtBox_Hos_Desti.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBox_Hos_Desti.Margin = new System.Windows.Forms.Padding(4);
             this.txtBox_Hos_Desti.Name = "txtBox_Hos_Desti";
             this.txtBox_Hos_Desti.Size = new System.Drawing.Size(137, 26);
             this.txtBox_Hos_Desti.TabIndex = 22;
@@ -181,7 +181,7 @@
             // 
             this.om_codNacTextBox.Enabled = false;
             this.om_codNacTextBox.Location = new System.Drawing.Point(1007, 592);
-            this.om_codNacTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.om_codNacTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.om_codNacTextBox.Name = "om_codNacTextBox";
             this.om_codNacTextBox.Size = new System.Drawing.Size(111, 26);
             this.om_codNacTextBox.TabIndex = 8;
@@ -194,9 +194,9 @@
             this.groupBox6.Controls.Add(this.label26);
             this.groupBox6.Controls.Add(this.om_firma_solicitante_textBox);
             this.groupBox6.Location = new System.Drawing.Point(867, 325);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox6.Size = new System.Drawing.Size(681, 239);
             this.groupBox6.TabIndex = 8;
             this.groupBox6.TabStop = false;
@@ -217,7 +217,7 @@
             // 
             this.om_firma_LServi_textBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.om_firma_LServi_textBox.Location = new System.Drawing.Point(376, 103);
-            this.om_firma_LServi_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.om_firma_LServi_textBox.Margin = new System.Windows.Forms.Padding(4);
             this.om_firma_LServi_textBox.Name = "om_firma_LServi_textBox";
             this.om_firma_LServi_textBox.Size = new System.Drawing.Size(296, 26);
             this.om_firma_LServi_textBox.TabIndex = 2;
@@ -239,7 +239,7 @@
             // 
             this.om_firma_solicitante_textBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.om_firma_solicitante_textBox.Location = new System.Drawing.Point(45, 103);
-            this.om_firma_solicitante_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.om_firma_solicitante_textBox.Margin = new System.Windows.Forms.Padding(4);
             this.om_firma_solicitante_textBox.Name = "om_firma_solicitante_textBox";
             this.om_firma_solicitante_textBox.Size = new System.Drawing.Size(276, 26);
             this.om_firma_solicitante_textBox.TabIndex = 0;
@@ -250,7 +250,7 @@
             // 
             this.om_codDestinoTextBox.Enabled = false;
             this.om_codDestinoTextBox.Location = new System.Drawing.Point(851, 592);
-            this.om_codDestinoTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.om_codDestinoTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.om_codDestinoTextBox.Name = "om_codDestinoTextBox";
             this.om_codDestinoTextBox.Size = new System.Drawing.Size(132, 26);
             this.om_codDestinoTextBox.TabIndex = 18;
@@ -265,9 +265,9 @@
             this.groupBox4.Controls.Add(this.label23);
             this.groupBox4.Controls.Add(this.label24);
             this.groupBox4.Location = new System.Drawing.Point(1225, 76);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(323, 231);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
@@ -278,7 +278,7 @@
             this.om_horaLlegadaBase.CustomFormat = "HH:mm";
             this.om_horaLlegadaBase.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.om_horaLlegadaBase.Location = new System.Drawing.Point(216, 127);
-            this.om_horaLlegadaBase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.om_horaLlegadaBase.Margin = new System.Windows.Forms.Padding(4);
             this.om_horaLlegadaBase.Name = "om_horaLlegadaBase";
             this.om_horaLlegadaBase.ShowUpDown = true;
             this.om_horaLlegadaBase.Size = new System.Drawing.Size(81, 26);
@@ -289,7 +289,7 @@
             this.om_horaLlegadaDestino.CustomFormat = "HH:mm";
             this.om_horaLlegadaDestino.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.om_horaLlegadaDestino.Location = new System.Drawing.Point(216, 62);
-            this.om_horaLlegadaDestino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.om_horaLlegadaDestino.Margin = new System.Windows.Forms.Padding(4);
             this.om_horaLlegadaDestino.Name = "om_horaLlegadaDestino";
             this.om_horaLlegadaDestino.ShowUpDown = true;
             this.om_horaLlegadaDestino.Size = new System.Drawing.Size(81, 26);
@@ -300,7 +300,7 @@
             this.om_fechaEntrada.CustomFormat = "yyyy-MM-dd";
             this.om_fechaEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.om_fechaEntrada.Location = new System.Drawing.Point(27, 183);
-            this.om_fechaEntrada.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.om_fechaEntrada.Margin = new System.Windows.Forms.Padding(4);
             this.om_fechaEntrada.Name = "om_fechaEntrada";
             this.om_fechaEntrada.Size = new System.Drawing.Size(271, 26);
             this.om_fechaEntrada.TabIndex = 18;
@@ -346,9 +346,9 @@
             this.groupBox3.Controls.Add(this.label18);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(867, 76);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(323, 234);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
@@ -359,7 +359,7 @@
             this.om_horaSalidaDestino.CustomFormat = "HH:mm";
             this.om_horaSalidaDestino.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.om_horaSalidaDestino.Location = new System.Drawing.Point(217, 127);
-            this.om_horaSalidaDestino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.om_horaSalidaDestino.Margin = new System.Windows.Forms.Padding(4);
             this.om_horaSalidaDestino.Name = "om_horaSalidaDestino";
             this.om_horaSalidaDestino.ShowUpDown = true;
             this.om_horaSalidaDestino.Size = new System.Drawing.Size(80, 26);
@@ -370,7 +370,7 @@
             this.om_horaSalidaBase.CustomFormat = "HH:mm";
             this.om_horaSalidaBase.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.om_horaSalidaBase.Location = new System.Drawing.Point(217, 62);
-            this.om_horaSalidaBase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.om_horaSalidaBase.Margin = new System.Windows.Forms.Padding(4);
             this.om_horaSalidaBase.Name = "om_horaSalidaBase";
             this.om_horaSalidaBase.ShowUpDown = true;
             this.om_horaSalidaBase.Size = new System.Drawing.Size(80, 26);
@@ -381,7 +381,7 @@
             this.om_fechaSalida.CustomFormat = "yyyy-MM-dd";
             this.om_fechaSalida.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.om_fechaSalida.Location = new System.Drawing.Point(27, 181);
-            this.om_fechaSalida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.om_fechaSalida.Margin = new System.Windows.Forms.Padding(4);
             this.om_fechaSalida.Name = "om_fechaSalida";
             this.om_fechaSalida.Size = new System.Drawing.Size(271, 26);
             this.om_fechaSalida.TabIndex = 10;
@@ -440,9 +440,9 @@
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(28, 340);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(801, 279);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
@@ -452,7 +452,7 @@
             // 
             this.txtBox_UnidadM.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBox_UnidadM.Location = new System.Drawing.Point(161, 239);
-            this.txtBox_UnidadM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBox_UnidadM.Margin = new System.Windows.Forms.Padding(4);
             this.txtBox_UnidadM.MaxLength = 100;
             this.txtBox_UnidadM.Name = "txtBox_UnidadM";
             this.txtBox_UnidadM.Size = new System.Drawing.Size(299, 26);
@@ -483,7 +483,7 @@
             this.om_serviciocomboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.om_serviciocomboBox.FormattingEnabled = true;
             this.om_serviciocomboBox.Location = new System.Drawing.Point(136, 106);
-            this.om_serviciocomboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.om_serviciocomboBox.Margin = new System.Windows.Forms.Padding(4);
             this.om_serviciocomboBox.Name = "om_serviciocomboBox";
             this.om_serviciocomboBox.Size = new System.Drawing.Size(272, 28);
             this.om_serviciocomboBox.Sorted = true;
@@ -505,7 +505,7 @@
             this.om_traslado_comboBox.Enabled = false;
             this.om_traslado_comboBox.FormattingEnabled = true;
             this.om_traslado_comboBox.Location = new System.Drawing.Point(473, 197);
-            this.om_traslado_comboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.om_traslado_comboBox.Margin = new System.Windows.Forms.Padding(4);
             this.om_traslado_comboBox.MaxLength = 50;
             this.om_traslado_comboBox.Name = "om_traslado_comboBox";
             this.om_traslado_comboBox.Size = new System.Drawing.Size(319, 28);
@@ -518,7 +518,7 @@
             this.om_paciente_textBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.om_paciente_textBox.Enabled = false;
             this.om_paciente_textBox.Location = new System.Drawing.Point(211, 26);
-            this.om_paciente_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.om_paciente_textBox.Margin = new System.Windows.Forms.Padding(4);
             this.om_paciente_textBox.Name = "om_paciente_textBox";
             this.om_paciente_textBox.Size = new System.Drawing.Size(581, 26);
             this.om_paciente_textBox.TabIndex = 15;
@@ -529,7 +529,7 @@
             this.om_cie_comboBox.Enabled = false;
             this.om_cie_comboBox.FormattingEnabled = true;
             this.om_cie_comboBox.Location = new System.Drawing.Point(136, 197);
-            this.om_cie_comboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.om_cie_comboBox.Margin = new System.Windows.Forms.Padding(4);
             this.om_cie_comboBox.MaxLength = 4;
             this.om_cie_comboBox.Name = "om_cie_comboBox";
             this.om_cie_comboBox.Size = new System.Drawing.Size(219, 28);
@@ -542,7 +542,7 @@
             this.om_diag_textBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.om_diag_textBox.Enabled = false;
             this.om_diag_textBox.Location = new System.Drawing.Point(136, 153);
-            this.om_diag_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.om_diag_textBox.Margin = new System.Windows.Forms.Padding(4);
             this.om_diag_textBox.Name = "om_diag_textBox";
             this.om_diag_textBox.Size = new System.Drawing.Size(656, 26);
             this.om_diag_textBox.TabIndex = 12;
@@ -554,7 +554,7 @@
             this.om_nac_comboBox.Enabled = false;
             this.om_nac_comboBox.FormattingEnabled = true;
             this.om_nac_comboBox.Location = new System.Drawing.Point(561, 64);
-            this.om_nac_comboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.om_nac_comboBox.Margin = new System.Windows.Forms.Padding(4);
             this.om_nac_comboBox.Name = "om_nac_comboBox";
             this.om_nac_comboBox.Size = new System.Drawing.Size(231, 28);
             this.om_nac_comboBox.TabIndex = 11;
@@ -564,7 +564,7 @@
             // om_ci_textBox
             // 
             this.om_ci_textBox.Location = new System.Drawing.Point(561, 110);
-            this.om_ci_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.om_ci_textBox.Margin = new System.Windows.Forms.Padding(4);
             this.om_ci_textBox.MaxLength = 10;
             this.om_ci_textBox.Name = "om_ci_textBox";
             this.om_ci_textBox.Size = new System.Drawing.Size(231, 26);
@@ -575,7 +575,7 @@
             // 
             this.om_edad_textBox.Enabled = false;
             this.om_edad_textBox.Location = new System.Drawing.Point(136, 66);
-            this.om_edad_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.om_edad_textBox.Margin = new System.Windows.Forms.Padding(4);
             this.om_edad_textBox.MaxLength = 3;
             this.om_edad_textBox.Name = "om_edad_textBox";
             this.om_edad_textBox.Size = new System.Drawing.Size(272, 26);
@@ -670,9 +670,9 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(28, 57);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(801, 276);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
@@ -682,7 +682,7 @@
             // 
             this.om_unidad_comboBox.FormattingEnabled = true;
             this.om_unidad_comboBox.Location = new System.Drawing.Point(228, 139);
-            this.om_unidad_comboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.om_unidad_comboBox.Margin = new System.Windows.Forms.Padding(4);
             this.om_unidad_comboBox.Name = "om_unidad_comboBox";
             this.om_unidad_comboBox.Size = new System.Drawing.Size(564, 28);
             this.om_unidad_comboBox.Sorted = true;
@@ -693,7 +693,7 @@
             // 
             this.txBox_Destino.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txBox_Destino.Location = new System.Drawing.Point(596, 228);
-            this.txBox_Destino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txBox_Destino.Margin = new System.Windows.Forms.Padding(4);
             this.txBox_Destino.Name = "txBox_Destino";
             this.txBox_Destino.Size = new System.Drawing.Size(196, 26);
             this.txBox_Destino.TabIndex = 13;
@@ -713,7 +713,7 @@
             // 
             this.cbo_MovPaciente.FormattingEnabled = true;
             this.cbo_MovPaciente.Location = new System.Drawing.Point(228, 228);
-            this.cbo_MovPaciente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbo_MovPaciente.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_MovPaciente.Name = "cbo_MovPaciente";
             this.cbo_MovPaciente.Size = new System.Drawing.Size(103, 28);
             this.cbo_MovPaciente.TabIndex = 11;
@@ -734,7 +734,7 @@
             // 
             this.om_cargo_textBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.om_cargo_textBox.Location = new System.Drawing.Point(228, 101);
-            this.om_cargo_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.om_cargo_textBox.Margin = new System.Windows.Forms.Padding(4);
             this.om_cargo_textBox.Name = "om_cargo_textBox";
             this.om_cargo_textBox.Size = new System.Drawing.Size(564, 26);
             this.om_cargo_textBox.TabIndex = 9;
@@ -753,7 +753,7 @@
             // 
             this.om_motivo_textBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.om_motivo_textBox.Location = new System.Drawing.Point(228, 174);
-            this.om_motivo_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.om_motivo_textBox.Margin = new System.Windows.Forms.Padding(4);
             this.om_motivo_textBox.Name = "om_motivo_textBox";
             this.om_motivo_textBox.Size = new System.Drawing.Size(564, 26);
             this.om_motivo_textBox.TabIndex = 7;
@@ -762,7 +762,7 @@
             // 
             this.om_solicitantetextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.om_solicitantetextBox.Location = new System.Drawing.Point(228, 62);
-            this.om_solicitantetextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.om_solicitantetextBox.Margin = new System.Windows.Forms.Padding(4);
             this.om_solicitantetextBox.Name = "om_solicitantetextBox";
             this.om_solicitantetextBox.Size = new System.Drawing.Size(564, 26);
             this.om_solicitantetextBox.TabIndex = 5;
@@ -774,7 +774,7 @@
             this.om_datePicker.CustomFormat = "yyyy-MM-dd";
             this.om_datePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.om_datePicker.Location = new System.Drawing.Point(228, 26);
-            this.om_datePicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.om_datePicker.Margin = new System.Windows.Forms.Padding(4);
             this.om_datePicker.Name = "om_datePicker";
             this.om_datePicker.Size = new System.Drawing.Size(348, 26);
             this.om_datePicker.TabIndex = 4;
@@ -823,7 +823,7 @@
             // 
             this.om_num_tbox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.om_num_tbox.Location = new System.Drawing.Point(293, 22);
-            this.om_num_tbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.om_num_tbox.Margin = new System.Windows.Forms.Padding(4);
             this.om_num_tbox.MaxLength = 20;
             this.om_num_tbox.Name = "om_num_tbox";
             this.om_num_tbox.Size = new System.Drawing.Size(143, 26);
@@ -864,9 +864,9 @@
             this.tabPage2.Controls.Add(this.label21);
             this.tabPage2.Controls.Add(this.groupBox5);
             this.tabPage2.Location = new System.Drawing.Point(4, 26);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage2.Size = new System.Drawing.Size(1591, 647);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Estado";
@@ -886,7 +886,7 @@
             // 
             this.est_firma_TextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.est_firma_TextBox.Location = new System.Drawing.Point(524, 342);
-            this.est_firma_TextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.est_firma_TextBox.Margin = new System.Windows.Forms.Padding(4);
             this.est_firma_TextBox.Name = "est_firma_TextBox";
             this.est_firma_TextBox.Size = new System.Drawing.Size(395, 26);
             this.est_firma_TextBox.TabIndex = 27;
@@ -897,7 +897,7 @@
             // 
             this.est_cedConductorTextBox.Enabled = false;
             this.est_cedConductorTextBox.Location = new System.Drawing.Point(1091, 105);
-            this.est_cedConductorTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.est_cedConductorTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.est_cedConductorTextBox.Name = "est_cedConductorTextBox";
             this.est_cedConductorTextBox.Size = new System.Drawing.Size(132, 26);
             this.est_cedConductorTextBox.TabIndex = 26;
@@ -907,7 +907,7 @@
             // 
             this.est_codVehiTextBox.Enabled = false;
             this.est_codVehiTextBox.Location = new System.Drawing.Point(1412, 53);
-            this.est_codVehiTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.est_codVehiTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.est_codVehiTextBox.Name = "est_codVehiTextBox";
             this.est_codVehiTextBox.Size = new System.Drawing.Size(132, 26);
             this.est_codVehiTextBox.TabIndex = 25;
@@ -917,7 +917,7 @@
             // 
             this.est_gruardarBtn.Enabled = false;
             this.est_gruardarBtn.Location = new System.Drawing.Point(1412, 377);
-            this.est_gruardarBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.est_gruardarBtn.Margin = new System.Windows.Forms.Padding(4);
             this.est_gruardarBtn.Name = "est_gruardarBtn";
             this.est_gruardarBtn.Size = new System.Drawing.Size(100, 28);
             this.est_gruardarBtn.TabIndex = 24;
@@ -929,7 +929,7 @@
             // 
             this.est_vehiClassTextBox.Enabled = false;
             this.est_vehiClassTextBox.Location = new System.Drawing.Point(547, 49);
-            this.est_vehiClassTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.est_vehiClassTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.est_vehiClassTextBox.Name = "est_vehiClassTextBox";
             this.est_vehiClassTextBox.Size = new System.Drawing.Size(183, 26);
             this.est_vehiClassTextBox.TabIndex = 23;
@@ -939,7 +939,7 @@
             this.est_vehiNumComboBox.Enabled = false;
             this.est_vehiNumComboBox.FormattingEnabled = true;
             this.est_vehiNumComboBox.Location = new System.Drawing.Point(871, 49);
-            this.est_vehiNumComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.est_vehiNumComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.est_vehiNumComboBox.Name = "est_vehiNumComboBox";
             this.est_vehiNumComboBox.Size = new System.Drawing.Size(160, 28);
             this.est_vehiNumComboBox.TabIndex = 22;
@@ -953,7 +953,7 @@
             this.est_conductComboBox.Enabled = false;
             this.est_conductComboBox.FormattingEnabled = true;
             this.est_conductComboBox.Location = new System.Drawing.Point(547, 105);
-            this.est_conductComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.est_conductComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.est_conductComboBox.Name = "est_conductComboBox";
             this.est_conductComboBox.Size = new System.Drawing.Size(484, 28);
             this.est_conductComboBox.TabIndex = 21;
@@ -964,7 +964,7 @@
             this.est_datePicker.CustomFormat = "yyyy-MM-dd";
             this.est_datePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.est_datePicker.Location = new System.Drawing.Point(547, 256);
-            this.est_datePicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.est_datePicker.Margin = new System.Windows.Forms.Padding(4);
             this.est_datePicker.Name = "est_datePicker";
             this.est_datePicker.Size = new System.Drawing.Size(316, 26);
             this.est_datePicker.TabIndex = 18;
@@ -995,7 +995,7 @@
             this.est_obsTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.est_obsTextBox.Enabled = false;
             this.est_obsTextBox.Location = new System.Drawing.Point(547, 194);
-            this.est_obsTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.est_obsTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.est_obsTextBox.Name = "est_obsTextBox";
             this.est_obsTextBox.Size = new System.Drawing.Size(997, 26);
             this.est_obsTextBox.TabIndex = 15;
@@ -1026,7 +1026,7 @@
             this.est_ParamTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.est_ParamTextBox.Enabled = false;
             this.est_ParamTextBox.Location = new System.Drawing.Point(547, 151);
-            this.est_ParamTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.est_ParamTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.est_ParamTextBox.Name = "est_ParamTextBox";
             this.est_ParamTextBox.Size = new System.Drawing.Size(484, 26);
             this.est_ParamTextBox.TabIndex = 12;
@@ -1047,7 +1047,7 @@
             this.est_placaTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.est_placaTextBox.Enabled = false;
             this.est_placaTextBox.Location = new System.Drawing.Point(1189, 52);
-            this.est_placaTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.est_placaTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.est_placaTextBox.Name = "est_placaTextBox";
             this.est_placaTextBox.Size = new System.Drawing.Size(160, 26);
             this.est_placaTextBox.TabIndex = 8;
@@ -1088,9 +1088,9 @@
             this.groupBox5.Controls.Add(this.est_solicitudComboBox);
             this.groupBox5.Controls.Add(this.label17);
             this.groupBox5.Location = new System.Drawing.Point(21, 26);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox5.Size = new System.Drawing.Size(307, 98);
             this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
@@ -1100,7 +1100,7 @@
             // 
             this.est_solicitudComboBox.FormattingEnabled = true;
             this.est_solicitudComboBox.Location = new System.Drawing.Point(124, 34);
-            this.est_solicitudComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.est_solicitudComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.est_solicitudComboBox.Name = "est_solicitudComboBox";
             this.est_solicitudComboBox.Size = new System.Drawing.Size(160, 28);
             this.est_solicitudComboBox.TabIndex = 1;
@@ -1154,7 +1154,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(71, 63);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(332, 106);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1164,8 +1164,8 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1289, 102);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(1290, 78);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(225, 113);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1195,7 +1195,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Orden de movilización";
