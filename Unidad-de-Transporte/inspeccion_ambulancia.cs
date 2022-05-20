@@ -140,7 +140,7 @@ namespace Unidad_de_Transporte
             //-----------------Datos Generales----------------------
             //--------------------------------------------------------------------------
             NpgsqlCommand cmd = new NpgsqlCommand();
-            string strSQL = "insert into from inspeccion_ambulancia.datos_generales values ";
+            string strSQL = "insert into inspeccion_ambulancia.datos_generales values ";
             strSQL += "(" + no_reporte.Text;
             strSQL += ", " + coordinacion_zonal.Value.ToString();
             strSQL += ", trim('" + conductor_entrega.Text + "'), trim('" + conductor_recibe.Text + "')";
@@ -166,7 +166,7 @@ namespace Unidad_de_Transporte
             List<TextBox> textlist = new List<TextBox>() {
                              textBox1, textBox2
                          };
-            strSQL = "insert into from inspeccion_ambulancia.limpieza values ";
+            strSQL = "insert into inspeccion_ambulancia.limpieza values ";
 
 
             char estado;
@@ -195,7 +195,7 @@ namespace Unidad_de_Transporte
                              textBox3, textBox4, textBox5, textBox6, textBox7, textBox8, textBox9, textBox10, textBox11, textBox12,
                              textBox13, textBox14, textBox15, textBox16, textBox17, textBox18, textBox19, textBox20, textBox21
                          };
-            strSQL = "insert into from inspeccion_ambulancia.cabina_interior values ";
+            strSQL = "insert into inspeccion_ambulancia.cabina_interior values ";
 
             for (int i = 3; i < 22; i++)
             {
@@ -217,7 +217,7 @@ namespace Unidad_de_Transporte
             textlist = new List<TextBox>() {
                              textBox22, textBox23, textBox24, textBox25
                          };
-            strSQL = "insert into from inspeccion_ambulancia.documentos values ";
+            strSQL = "insert into inspeccion_ambulancia.documentos values ";
 
 
             for (int i = 22; i < 26; i++)
@@ -242,7 +242,7 @@ namespace Unidad_de_Transporte
                              textBox26, textBox27, textBox28, textBox29, textBox30, textBox31, textBox32, textBox33, textBox34, textBox35, textBox36,
                              textBox37, textBox38, textBox39, textBox40, textBox41, textBox42, textBox43, textBox44, textBox45, textBox46, textBox47
                          };
-            strSQL = "insert into from inspeccion_ambulancia.cabina_exterior values ";
+            strSQL = "insert into inspeccion_ambulancia.cabina_exterior values ";
 
             for (int i = 26; i < 48; i++)
             {
@@ -293,7 +293,7 @@ namespace Unidad_de_Transporte
                 if (!string.IsNullOrEmpty(textlist[j - 48].Text))
                 {
                     empty = false;
-                    strSQL += "insert into from inspeccion_ambulancia.danos values ('" + no_reporte.Text + "'," + k + ",'" + textlist[j - 48].Text + "'); ";
+                    strSQL += "insert into inspeccion_ambulancia.danos values ('" + no_reporte.Text + "'," + k + ",'" + textlist[j - 48].Text + "'); ";
                     //if (j < 56  || (j == 56 && !string.IsNullOrEmpty(textlist[j+1].Text)))
                 }
                 j++; k++;
@@ -314,7 +314,7 @@ namespace Unidad_de_Transporte
 
             //string nombre1 = @"C:\Users\Anthony\Pictures\Hospital\" + no_reporte.Text + "_combustible.jpg";
             //string nombre2 = @"C:\Users\Anthony\Pictures\Hospital\" + no_reporte.Text + "_temperatura.jpg";
-            strSQL = "insert into from inspeccion_ambulancia.otros_datos values ";
+            strSQL = "insert into inspeccion_ambulancia.otros_datos values ";
             strSQL += "(" + no_reporte.Text + "," + combustible.Text + ",'" + temperatura.Text + "'," + kilometraje.Text +  ",'" + observaciones_generales.Text +"')";
             cmd.CommandText = strSQL;
             cmd.Connection = main.cn;

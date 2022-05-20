@@ -243,9 +243,9 @@ namespace Unidad_de_Transporte
             this.label81 = new System.Windows.Forms.Label();
             this.label80 = new System.Windows.Forms.Label();
             this.pic_temperatura = new System.Windows.Forms.PictureBox();
+            this.label79 = new System.Windows.Forms.Label();
             this.label78 = new System.Windows.Forms.Label();
             this.pic_combustible = new System.Windows.Forms.PictureBox();
-            this.label79 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic_msp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_escudo)).BeginInit();
             this.Danos.SuspendLayout();
@@ -652,7 +652,7 @@ namespace Unidad_de_Transporte
             // textBox47
             // 
             this.textBox47.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox47.Location = new System.Drawing.Point(673, 843);
+            this.textBox47.Location = new System.Drawing.Point(673, 837);
             this.textBox47.Margin = new System.Windows.Forms.Padding(4);
             this.textBox47.Name = "textBox47";
             this.textBox47.Size = new System.Drawing.Size(468, 27);
@@ -674,7 +674,7 @@ namespace Unidad_de_Transporte
             // textBox46
             // 
             this.textBox46.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox46.Location = new System.Drawing.Point(673, 808);
+            this.textBox46.Location = new System.Drawing.Point(673, 803);
             this.textBox46.Margin = new System.Windows.Forms.Padding(4);
             this.textBox46.Name = "textBox46";
             this.textBox46.Size = new System.Drawing.Size(468, 27);
@@ -696,7 +696,7 @@ namespace Unidad_de_Transporte
             // textBox45
             // 
             this.textBox45.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox45.Location = new System.Drawing.Point(673, 774);
+            this.textBox45.Location = new System.Drawing.Point(673, 770);
             this.textBox45.Margin = new System.Windows.Forms.Padding(4);
             this.textBox45.Name = "textBox45";
             this.textBox45.Size = new System.Drawing.Size(468, 27);
@@ -718,7 +718,7 @@ namespace Unidad_de_Transporte
             // textBox44
             // 
             this.textBox44.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox44.Location = new System.Drawing.Point(673, 742);
+            this.textBox44.Location = new System.Drawing.Point(673, 738);
             this.textBox44.Margin = new System.Windows.Forms.Padding(4);
             this.textBox44.Name = "textBox44";
             this.textBox44.Size = new System.Drawing.Size(468, 27);
@@ -740,7 +740,7 @@ namespace Unidad_de_Transporte
             // textBox43
             // 
             this.textBox43.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox43.Location = new System.Drawing.Point(673, 708);
+            this.textBox43.Location = new System.Drawing.Point(673, 703);
             this.textBox43.Margin = new System.Windows.Forms.Padding(4);
             this.textBox43.Name = "textBox43";
             this.textBox43.Size = new System.Drawing.Size(468, 27);
@@ -762,7 +762,7 @@ namespace Unidad_de_Transporte
             // textBox42
             // 
             this.textBox42.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox42.Location = new System.Drawing.Point(673, 674);
+            this.textBox42.Location = new System.Drawing.Point(673, 668);
             this.textBox42.Margin = new System.Windows.Forms.Padding(4);
             this.textBox42.Name = "textBox42";
             this.textBox42.Size = new System.Drawing.Size(468, 27);
@@ -850,7 +850,7 @@ namespace Unidad_de_Transporte
             // textBox38
             // 
             this.textBox38.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox38.Location = new System.Drawing.Point(673, 536);
+            this.textBox38.Location = new System.Drawing.Point(673, 537);
             this.textBox38.Margin = new System.Windows.Forms.Padding(4);
             this.textBox38.Name = "textBox38";
             this.textBox38.Size = new System.Drawing.Size(468, 27);
@@ -938,7 +938,7 @@ namespace Unidad_de_Transporte
             // textBox34
             // 
             this.textBox34.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox34.Location = new System.Drawing.Point(673, 370);
+            this.textBox34.Location = new System.Drawing.Point(673, 371);
             this.textBox34.Margin = new System.Windows.Forms.Padding(4);
             this.textBox34.Name = "textBox34";
             this.textBox34.Size = new System.Drawing.Size(468, 27);
@@ -960,7 +960,7 @@ namespace Unidad_de_Transporte
             // textBox33
             // 
             this.textBox33.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox33.Location = new System.Drawing.Point(673, 326);
+            this.textBox33.Location = new System.Drawing.Point(673, 324);
             this.textBox33.Margin = new System.Windows.Forms.Padding(4);
             this.textBox33.Name = "textBox33";
             this.textBox33.Size = new System.Drawing.Size(468, 27);
@@ -982,7 +982,7 @@ namespace Unidad_de_Transporte
             // textBox32
             // 
             this.textBox32.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox32.Location = new System.Drawing.Point(673, 286);
+            this.textBox32.Location = new System.Drawing.Point(673, 284);
             this.textBox32.Margin = new System.Windows.Forms.Padding(4);
             this.textBox32.Name = "textBox32";
             this.textBox32.Size = new System.Drawing.Size(468, 27);
@@ -1070,7 +1070,7 @@ namespace Unidad_de_Transporte
             // textBox28
             // 
             this.textBox28.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox28.Location = new System.Drawing.Point(673, 135);
+            this.textBox28.Location = new System.Drawing.Point(673, 132);
             this.textBox28.Margin = new System.Windows.Forms.Padding(4);
             this.textBox28.Name = "textBox28";
             this.textBox28.Size = new System.Drawing.Size(468, 27);
@@ -1114,7 +1114,7 @@ namespace Unidad_de_Transporte
             // textBox26
             // 
             this.textBox26.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox26.Location = new System.Drawing.Point(673, 60);
+            this.textBox26.Location = new System.Drawing.Point(673, 56);
             this.textBox26.Margin = new System.Windows.Forms.Padding(4);
             this.textBox26.Name = "textBox26";
             this.textBox26.Size = new System.Drawing.Size(468, 27);
@@ -2830,6 +2830,17 @@ namespace Unidad_de_Transporte
             this.pic_temperatura.TabIndex = 7;
             this.pic_temperatura.TabStop = false;
             // 
+            // label79
+            // 
+            this.label79.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label79.AutoSize = true;
+            this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label79.Location = new System.Drawing.Point(784, 23);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(145, 20);
+            this.label79.TabIndex = 6;
+            this.label79.Text = "TEMPERATURA";
+            // 
             // label78
             // 
             this.label78.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -2852,17 +2863,6 @@ namespace Unidad_de_Transporte
             this.pic_combustible.Size = new System.Drawing.Size(330, 138);
             this.pic_combustible.TabIndex = 0;
             this.pic_combustible.TabStop = false;
-            // 
-            // label79
-            // 
-            this.label79.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label79.AutoSize = true;
-            this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label79.Location = new System.Drawing.Point(784, 23);
-            this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(145, 20);
-            this.label79.TabIndex = 6;
-            this.label79.Text = "TEMPERATURA";
             // 
             // inspeccion_ambulancia
             // 
