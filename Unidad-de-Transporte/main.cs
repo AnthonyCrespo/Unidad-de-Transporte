@@ -22,7 +22,7 @@ namespace Unidad_de_Transporte
 
         private void main_Load(object sender, EventArgs e)
         {
-            string str = "Server = 127.0.0.1;Port = 5432; Database=unidad_transporte; User Id = postgres; Password = 1234;";
+            string str = "Server = 127.0.0.1;Port = 5432; Database=unidad_transporte; User Id = postgres; Password = hgsvp;";
             cn.ConnectionString = str;
             cn.Open();
 

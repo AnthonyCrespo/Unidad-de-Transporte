@@ -6748,6 +6748,13 @@
         YII=
 </value>
   </data>
+  <data name="label67.Text" xml:space="preserve">
+    <value>*  Emisión de Gases: Humo negro diésel: problemas con el combustible, un inyector puede tener fuga o se inyecta demasiado diésel a la cámara de 
+combustión / Humo negro gasolina: exceso de combustible en la cámara de combustión / Humo azul: falla motor por el ingreso de aceite a la cámara de 
+combustión, puede ser problemas en las válvulas, pistones, desgate del motor o exceso de aceite en el cárter / Humo blanco: es el vapor de agua cuando
+se enciende el vehículo en las mañanas, si el humo persiste significa falla en los cabezotes, block del motor o que tengan alguna fisura.  
+</value>
+  </data>
   <data name="pic_ambulancia.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAeAB4AAD/4QBaRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAMBAAUAAAAB
@@ -7750,13 +7757,6 @@
         RRRQAUUUUAFFFFABTGVQfur+VFFACYH91fyowP7q/lRRQAYH91fyowP7q/lRRQAYH91fyowP7q/lRRQA
         YH91fyowP7q/lRRQAYH91fyowP7q/lRRQBJRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFF
         FABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQB/9k=
-</value>
-  </data>
-  <data name="label67.Text" xml:space="preserve">
-    <value>*  Emisión de Gases: Humo negro diésel: problemas con el combustible, un inyector puede tener fuga o se inyecta demasiado diésel a la cámara de 
-combustión / Humo negro gasolina: exceso de combustible en la cámara de combustión / Humo azul: falla motor por el ingreso de aceite a la cámara de 
-combustión, puede ser problemas en las válvulas, pistones, desgate del motor o exceso de aceite en el cárter / Humo blanco: es el vapor de agua cuando
-se enciende el vehículo en las mañanas, si el humo persiste significa falla en los cabezotes, block del motor o que tengan alguna fisura.  
 </value>
   </data>
   <data name="pic_combustible.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
